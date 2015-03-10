@@ -1,5 +1,5 @@
 !!!5
-%html.no-js(lang="en"){:class => data.page.head_classes}
+%html.no-js(lang="ru"){:class => data.page.head_classes}
   %head
     %meta(charset="utf-8")/
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")/
@@ -31,10 +31,10 @@
         .container
           %ul
             - if data.respond_to?(:version)
-              %li Current Release: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
+              %li Текущая версия: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
             - else
-              %li Current Release: <span class="release-name">???</span>
-            %li=link_to "Release Notes", "/documentation/file.SASS_CHANGELOG.html"
+              %li Текущая версия: <span class="release-name">???</span>
+            %li=link_to "Описание выпуска", "/documentation/file.SASS_CHANGELOG.html"
             %li=link_to "Fork on Github", "https://github.com/sass/sass"
 
       - if content_for?(:section_bottom)
