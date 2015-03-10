@@ -1,7 +1,6 @@
-# Sass Site
+# Русифицированная версия Sass-сайта
 
-The Sass website is open source. See a typo? Have a UX improvement? Check out
-the [Contributing guide](https://github.com/sass/sass-site/blob/master/CONTRIBUTING.md)!
+Если у Вас есть замечания по переводу или есть какие то предложения по улучшению сайта
+создавайте issue-обращение в этом репозитории.
 
-* [Sass website Style Guide](http://sass-lang.com/styleguide)
-* [@TeamSassDesign](http://twitter.com/teamsassdesign)
+
