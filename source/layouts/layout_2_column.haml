@@ -39,7 +39,6 @@
               %li Текущая версия: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
             - else
               %li Текущая версия: <span class="release-name">???</span>
-            %li=link_to "Описание выпуска", "/documentation/file.SASS_CHANGELOG.html"
             %li=link_to "Fork on Github", "https://github.com/sass/sass"
 
       - if content_for?(:section_bottom)
