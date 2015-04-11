@@ -83,8 +83,17 @@ projects:
   - name: "SassDoc"
     url: "http://sassdoc.com/"
     description: "A documentation tool for Sass"
+  - name: "SomeGrids"
+    url: "https://github.com/mikaspell/SomeGrids"
+    description: "Simple, Awesome & Fast Sass grids with different display types"
 
 articles:
+  - name: "Почему Sass?"
+    url: "http://frontender.info/why-sass/"
+    description: "Отрывок из книги 'Sass для веб-дизайнеров' Дэна Седерхолма (Dan Cederholm)"
+  - name: "Руководство по SASS. Как верстать сайты в два раза быстрее?"
+    url: "http://dedushka.org/uroki/6672.html"
+    description: "Назар Токарь, Июнь 2014"
   - name: "Sass vs. LESS"
     url: "http://css-tricks.com/sass-vs-less/"
     description: "by Chris Coyier, from CSS Tricks, May 2012"

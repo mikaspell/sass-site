@@ -1,31 +1,31 @@
 ---
-title: Brand Guidelines
+title: Брендирование
 ---
 
-%h2 Brand Usage
+%h2 Использование бренда
 
 %ul
   %li
-    Do not stretch or distort the logo. Use the "seal" version of the logo
-    when needing to use a square image (like avatars).
+    Не растягивайте и деформируйте логотип. Используйте версию "для печати" когда
+    вам необходим логотип в квадратном виде (как аватар).
 
   %li
-    Do not alter the color of the logo. The official logo color is `$hopbush`
+    Не изменяйте цвет логотипа. Официальный цвет - `$hopbush`
     (`#c69`).
 
   %li
-    If you have to put the logo on a busy/colorful background, then you can
-    use one of the reversed (on white) logos, provided here.
+    Если вы используете логотип на цветном фоне или фоне с большим кол-вом 
+    элементов, то вы можете использовать реверсированный логотип (на белом фоне),
+    который представлен ниже.
 
   %li
     %p
-      When using the Sass brand and identity in your presentations, articles,
-      videos, or any other media, please be respectful. The Sass brand is
-      feminine and we love that. But our brand must never be used alongside
-      sexist imagery. In fact, we
-      = link_to "explicitly changed our logo", "https://github.com/sass/sass/issues/349"
-      for that very reason. If you have questions about the images you want to
-      use, please feel free to contact us at:
+      Когда используете бренд Sass или другие элементы Sass в вашей презентации,
+      статье, видео и в других вариантах, пожалуйста, будьте уважительны. Бренд 
+      Sass женственный и за это мы его любим, но наш бренд никогда не должен быть
+      использован в сексистких образах. На самом деле мы <a href="https://github.com/sass/sass/issues/349">сильно изменили наш логотип</a>
+      в связи с этим. Если у Вас есть вопросы по поводу изображений, которые Вы
+      хотите использовать, не стесняйтесь обращаться к нам по адресу:
       = succeed "." do
         :javascript
           //<![CDATA[
@@ -44,26 +44,26 @@ title: Brand Guidelines
               while(x=eval(x));
             //-->
           //]]>
-      Read our
-      = link_to "community&nbsp;guidelines", "/community-guidelines"
-      for more information.
+      Читайте наши
+      = link_to "принципы сообщества", "/community-guidelines"
+      для получения дополнительной информации.
 
-%p= link_to "Download vector logos", "/assets/img/styleguide/sass-logo.zip", class: "button primary"
+%p= link_to "Скачать логотип в векторе", "/assets/img/styleguide/sass-logo.zip", class: "button primary"
 %p= partial "/styleguide/brand_license"
 
 .logos
-  %h3 Standard
+  %h3 Стандартный
   %ul.list-columns
     %li= image_tag "styleguide/color.png", height: "80", alt: "Sass"
     %li= image_tag "styleguide/seal-color.png", height: "80", alt: "Sass"
 
-  %h3 White
+  %h3 Светлый
   %ul.list-tiled.swatch-color-background-shade
     %li= image_tag "styleguide/white.png", height: "80", alt: "Sass"
     %li= image_tag "styleguide/seal-color-reversed.png", height: "80", alt: "Sass"
     %li= image_tag "styleguide/seal-black-reversed.png", height: "80", alt: "Sass"
 
-  %h3 Black
+  %h3 Темный
   %ul.list-columns
     %li= image_tag "styleguide/black.png", height: "80", alt: "Sass"
     %li= image_tag "styleguide/seal-black.png", height: "80", alt: "Sass"

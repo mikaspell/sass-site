@@ -1,41 +1,47 @@
 ---
-title: Sass Basics
+title: Основы Sass
 ---
 
 %p.introduction
-  Before you can use Sass, you need to set it up on your project. If you want
-  to just browse here, go ahead, but we recommend you go install Sass first.
-  = link_to "Go here", "/install"
-  if you want to learn how to get everything setup.
+  Прежде, чем Вы сможете использовать Sass, Вам необходимо его настроить в вашем 
+  проекте. Если Вы хотите просто почитать, то не стесняйтесь - читайте, но мы 
+  рекомендуем сначала установить Sass.
+  = link_to "Установите Sass", "/install"
+  для того, чтобы разобраться во всех возможностях Sass.
 
 - content_for :complementary do
-  %h3 Topics
+  %h3 Разделы
   %ul.anchors
-    %li= link_to "Preprocessing", "#topic-1"
-    %li= link_to "Variables",     "#topic-2"
-    %li= link_to "Nesting",       "#topic-3"
-    %li= link_to "Partials",      "#topic-4"
-    %li= link_to "Import",        "#topic-5"
-    %li= link_to "Mixins",        "#topic-6"
-    %li= link_to "Inheritance",   "#topic-7"
-    %li= link_to "Operators",     "#topic-8"
+    %li= link_to "Препроцессор", "#topic-1"
+    %li= link_to "Переменные",     "#topic-2"
+    %li= link_to "Вложенности",       "#topic-3"
+    %li= link_to "Фрагментирование",      "#topic-4"
+    %li= link_to "Импорт",        "#topic-5"
+    %li= link_to "Миксины",        "#topic-6"
+    %li= link_to "Наследование",   "#topic-7"
+    %li= link_to "Операторы",     "#topic-8"
 
 %ul.slides
   %li#topic-1
     :markdown
-      ## Preprocessing
+      ## Предварительная обработка
 
-      CSS on its own can be fun, but stylesheets are getting larger, more complex, and harder to maintain. This is where a preprocessor can help. Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun again.
+      Написание CSS само по себе весело, но когда таблица стилей становится огромной, то становится и сложно её обслуживать.
+      И вот в таком случае нам поможет препроцессор. Sass позволяет использовать функции недоступные в самом CSS, например, 
+      переменные, вложенности, миксины, наследование и другие приятные вещи, возвращающие удобство написания CSS. 
 
-      Once you start tinkering with Sass, it will take your preprocessed Sass file and save it out as a normal CSS file that you can use in your web&nbsp;site.
+      Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass файл и сохраняет его как простой CSS файл, 
+      который Вы сможете использовать на любом сайте.
 
       * * *
 
   %li#topic-2
     :markdown
-      ## Variables
+      ## Переменные
 
-      Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the <code>$</code> symbol to make something a variable. Here's an example:
+      Думайте о переменных, как о способе хранения информации, которую вы хотите использовать на протяжении написания
+      всех стилей проекта. Вы можете хранить в переменных цвета, стеки шрифтов или любые другие значения CSS, которые
+      вы хотите использовать. Чтобы создать переменную в Sass нужно использовать символ <code>$</code>. Рассмотрим пример:
 
     %ul
       %li= link_to "SCSS", "#topic-2-SCSS"
@@ -50,7 +56,9 @@ title: Sass Basics
       ~ partial "code-snippets/homepage-variables-sass"
 
     :markdown
-      When the Sass is processed, it takes the variables we define for the <code>$font-stack</code> and <code>$primary-color</code> and outputs normal CSS with our variable values placed in the CSS. This can be extremely powerful when working with brand colors and keeping them consistent throughout the&nbsp;site.
+      Когда Sass обрабатывается, он принимает значения, заданные нами в <code>$font-stack</code> и <code>$primary-color</code>
+      и вставляет их в обычном CSS файле в тех местах, где мы указывали переменные как значения. Таким образом переменные
+      становятся мощнейшей возможностью, например, при работе с фирменными цветами, используемыми на всем сайте.
 
     ~ partial "code-snippets/homepage-variables-css"
 
@@ -58,14 +66,15 @@ title: Sass Basics
 
   %li#topic-3
     :markdown
-      ## Nesting
+      ## Вложенности
 
-      When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't.
+      При написании HTML, Вы, наверное, заметили, что он имеет четкую вложенную и визуальную иерархию. С CSS это не так.
 
-      Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in
-      over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
+      Sass позволит вам вкладывать CSS селекторы таким же образом, как и в визуальной иерархии HTML. Но помните, что 
+      чрезмерное количество вложенностей делает ваш документ менее читабельным и воспринимаемым, что считается
+      плохой практикой.
 
-      With that in mind, here's an example of some typical styles for a site's&nbsp;navigation:
+      Чтобы понять что мы имеем ввиду, приведем типичный пример стилей навигации на сайте:
 
     %ul
       %li= link_to "SCSS", "#topic-3-SCSS"
@@ -80,7 +89,10 @@ title: Sass Basics
       ~ partial "code-snippets/homepage-nesting-sass"
 
     :markdown
-      You'll notice that the <code>ul</code>, <code>li</code>, and <code>a</code> selectors are nested inside the <code>nav</code> selector. This is a great way to organize your CSS and make it more readable. When you generate the CSS you'll get something like&nbsp;this:
+
+      Вы заметили, что селекторы <code>ul</code>, <code>li</code>, и <code>a</code> являются вложенными в селектор <code>nav</code>?
+      Это отличный способ сделать ваш CSS файл более читабельным. Когда вы сгенерируете CSS файл, то на выходе вы получите
+      что-то вроде этого:
 
     ~ partial "code-snippets/homepage-nesting-css"
 
@@ -88,19 +100,29 @@ title: Sass Basics
 
   %li#topic-4
     :markdown
-      ## Partials
+      ## Фрагментирование
 
-      You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files. This is a great way to modularize your CSS and help keep things easier to maintain. A partial is simply a Sass file named with a leading underscore. You might name it something like <code>_partial.scss</code>. The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the <code>@import</code> directive.
+      Вы можете создавать фрагменты Sass файла, которые будут содержать в себе небольшие отрывки CSS, которые
+      можно будет использовать в других Sass файлах. Это отличный способ сделать ваш CSS модульным, а также 
+      облегчить его обслуживание. Фрагмент - это простой Sass файл, имя которого начинается с нижнего подчеркивания,
+      например, <code>_partial.scss</code>. Нижнее подчеркивание в имени Sass файла говорит компилятору
+      о том, что это только фрагмент и он не должен компилироваться в CSS. Фрагменты Sass подключаются при 
+      помощи директивы <code>@import</code>.
 
       ***
 
   %li#topic-5
     :markdown
-      ## Import
+      ## Импорт
 
-      CSS has an import option that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each time you use <code>@import</code> in CSS it creates another HTTP request. Sass builds on top of the current CSS <code>@import</code> but instead of requiring an HTTP request, Sass will take the file that you want to import and combine it with the file you're importing into so you can serve a single CSS file to the web browser.
+      CSS имеет возможность импорта, которая позволяет разделить ваш CSS файл на более мелкие и облегчить их
+      в обслуживании. Но у этого способа есть весомый недостаток: каждый раз когда вы в CSS используете <code>@import</code>,
+      то в CSS создается еще один HTTP-запрос. Sass берет идею импортирования файлов через директиву <code>@import</code>,
+      но вместо создания отдельного HTTP-запроса Sass импортирует указанный в директиве файл в тот, где он вызывается,
+      т.е. на выходе получается один CSS файл, скомпилированный из нескольких фрагментов.
 
-      Let's say you have a couple of Sass files, <code>\_reset.scss</code> and <code>base.scss</code>. We want to import <code>\_reset.scss</code> into <code>base.scss</code>.
+      Например, у вас есть несколько фрагментов Sass файлов - <code>\_reset.scss</code> и <code>base.scss</code>. И мы
+      хотим импортировать <code>\_reset.scss</code> в <code>base.scss</code>.
 
     %ul
       %li= link_to "SCSS", "#topic-5-SCSS"
@@ -118,7 +140,9 @@ title: Sass Basics
 
     :markdown
 
-      Notice we're using <code>@import 'reset';</code> in the <code>base.scss</code> file. When you import a file you don't need to include the file extension <code>.scss</code>. Sass is smart and will figure it out for you. When you generate the CSS you'll&nbsp;get:
+      Обратите внимание на то, что мы используем <code>@import 'reset';</code> в <code>base.scss</code> файле. Когда вы импортируете
+      файл, то не нужно указывать расширение <code>.scss</code>. Sass - умный язык и он сам догадается. Когда CSS сгенерируется
+      вы получите:
 
     ~ partial "code-snippets/homepage-import-css"
 
@@ -126,9 +150,12 @@ title: Sass Basics
 
   %li#topic-6
     :markdown
-      ## Mixins
+      ## Миксины (примеси)
 
-      Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. Here's an example for <code>border-radius</code>.
+      Некоторые вещи в CSS весьма утомительно писать, особенно в CSS3, где плюс ко всему зачастую требуется использовать
+      большое количество вендорных префиксов. Миксины позволяют создавать группы деклараций CSS, которые вам придется 
+      использовать по нескольку раз на сайте. You can even pass in values to make your mixin more flexible. Хорошо использовать
+      миксины для вендорных префиксов. Пример для <code>border-radius</code>:
 
     %ul
       %li= link_to "SCSS", "#topic-6-SCSS"
@@ -143,7 +170,12 @@ title: Sass Basics
       ~ partial "code-snippets/homepage-mixins-sass"
 
     :markdown
-      To create a mixin you use the <code>@mixin</code> directive and give it a name. We've named our mixin <code>border-radius</code>. We're also using the variable <code>$radius</code> inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with <code>@include</code> followed by the name of the mixin. When your CSS is generated it'll look like this:
+
+      Для создания миксина используйте директиву <code>@mixin</code> + название этого миксина. Мы назвали наш миксиин
+      <code>border-radius</code>. Также, в миксине мы используем переменную <code>$radius</code> внутри скобок, тем самым 
+      позволяя себе передавать в переменной все, то захотим. После того, как вы создали миксин, вы можете его использовать 
+      в качестве параметра CSS, начиная вызов с <code>@include</code> и имени миксина. Когда ваш CSS скомпилируется
+      вы получите следующее:
 
     ~ partial "code-snippets/homepage-mixins-css"
 
@@ -151,9 +183,11 @@ title: Sass Basics
 
   %li#topic-7
     :markdown
-      ## Extend/Inheritance
+      ## Наследование
 
-      This is one of the most useful features of Sass. Using <code>@extend</code> lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY. In our example we're going to create a simple series of messaging for errors, warnings and successes.
+      Это одна из самых полезных функций Sass. Используя директиву <code>@extend</code> можно наследовать наборы свойств
+      CSS от одного селектора другому. Это позволяет держать ваш Sass файл в "чистоте". В нашем примере мы покажем вам как 
+      сделать стили оповещений об ошибках, предупреждениях и удачных исходов.
 
     %ul
       %li= link_to "SCSS", "#topic-7-SCSS"
@@ -168,7 +202,10 @@ title: Sass Basics
       ~ partial "code-snippets/homepage-extend-sass"
 
     :markdown
-      What the above code does is allow you to take the CSS properties in <code>.message</code> and apply them to <code>.success</code>, <code>.error</code>, & <code>.warning</code>. The magic happens with the generated CSS, and this helps you avoid having to write multiple class names on HTML elements. This is what it looks&nbsp;like:
+
+      Вышеуказанный код позволяет взять свойства CSS из <code>.message</code> и применить их в <code>.success</code>, <code>.error</code> 
+      и <code>.warning</code>. Во время компиляции CSS файла работает магия, которая поможет вам избежать написания лишних классов
+      в HTML элементах. Результат выглядит вот так:
 
     ~ partial "code-snippets/homepage-extend-css"
 
@@ -176,9 +213,11 @@ title: Sass Basics
 
   %li#topic-8
     :markdown
-      ## Operators
+      ## Математические операторы
 
-      Doing math in your CSS is very helpful. Sass has a handful of standard math operators like `+`, `-`, `*`, `/`, and `%`. In our example we're going to do some simple math to calculate widths for an `aside` & `article`.
+      Использовать математику в CSS очень полезно. Sass имеет несколько стандартных математических операторов, таких как 
+      `+`, `-`, `*`, `/`, и `%`. В нашем примере мы совершаем простые математические вычисления для расчета ширины
+      `aside` & `article`.
 
     %ul
       %li= link_to "SCSS", "#topic-8-SCSS"
@@ -193,6 +232,9 @@ title: Sass Basics
       ~ partial "code-snippets/homepage-operators-sass"
 
     :markdown
-      We've created a very simple fluid grid, based on 960px. Operations in Sass let us do something like take pixel values and convert them to percentages without much hassle. The generated CSS will look like:
+
+      Мы создали простую отзывчивую модульную сетку, с шириной в 960px. Используя математические операторы, мы 
+      использовали полученные данные с пиксельными значениями и конвертировали их в процентные, причем без особых усилий.
+      Скомпилированный CSS выглядит так:
 
     ~ partial "code-snippets/homepage-operators-css"
