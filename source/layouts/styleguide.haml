@@ -46,12 +46,12 @@
 
               - content_for :complementary do
                 - root_url = data.sitemap.url
-                %h3= link_to "Гид по стилю", "/styleguide"
+                %h3= link_to "Руководство по стилю", "/styleguide"
                 %ul
                   - sitemap.resources.each do |page|
                     - if page.url =~ /styleguide/
                       - unless page.url =~ /assets/
-                        - unless page.data.title == "Гид по стилю"
+                        - unless page.data.title == "Руководство по стилю"
                           - unless page.data.title == "Responsive Test"
                             %li= link_to "#{page.data.title}", "#{root_url}#{page.url.gsub!(/(\/)+$/,'')}"
 
