@@ -26,9 +26,6 @@
 -#
 
 .alert.stickers
-  .container
-    %p
-      %strong Ваше устройство требует больше Sass.
-      = succeed "." do
-       %a{:href => "https://hosting.reg.ru/?rid=107671"}
-          %img{:src => "https://www.reg.ru/i/affiliate/banregru_79rub_900x90.gif", :width => "900", :height => "90", :border => "0", :alt => "Хостинг"}
+  .container    
+    = link_to 'https://hosting.reg.ru/?rid=107671' do
+      = image_tag 'https://www.reg.ru/i/affiliate/banregru_79rub_900x90.gif', :style => "max-width:50%"
