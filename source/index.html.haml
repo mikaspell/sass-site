@@ -7,7 +7,7 @@ h1: CSS с суперсилой
 .hero-lockup
   %p.hero-image= image_tag "illustrations/glasses.svg", height: "160", alt: "Очки"
   %p.introduction
-    Sass является наиболее развитым и стабильным расширением CSS профессионального уровня в мире.
+    Sass является наиболее развитым и стабильным расширением CSS профессионального уровня.
 
 - content_for :section_bottom do
   %ul.list-tiled
@@ -27,9 +27,8 @@ h1: CSS с суперсилой
     %li
       %h3 Опыт
       %p
-        Sass находится в активной разработке
-        = time_ago_in_words DateTime.parse("Tue Nov 28 19:43:58 2006 +0000")
-        с любовью, Core&nbsp;Team.
+        Sass находится в активной разработке командой Sass Core более 8 лет и все это время
+        команда относится к этому процессу с любовью.
     %li
       %h3 Поддержка индустрией
       %p
@@ -46,11 +45,11 @@ h1: CSS с суперсилой
         Есть бесконечное количество фреймворков, построенных на Sass.
         = succeed "," do
           = link_to "Compass", "http://compass-style.org/"
-        = succeed "," do
+        = succeed " и" do
           = link_to "Bourbon", "http://bourbon.io/"
-        и
-        = link_to "Susy", "http://susy.oddbird.net/"
-        и это только несколько примеров из всего количества.
+        = succeed " -" do
+          = link_to "Susy", "http://susy.oddbird.net/"
+        это только несколько примеров из огромного количества проектов.
 
 - content_for :complementary do
   .get-started
