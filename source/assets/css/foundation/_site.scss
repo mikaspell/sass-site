@@ -24,7 +24,7 @@ html {
   &.toolkit-baseline { @include debug-vertical-alignment; }
 }
 
-body { background: none; }
+body { background: none; font-family: 'PT Sans', sans-serif;}
 
 @mixin theme-selection { background: $color-background-shade; }
 

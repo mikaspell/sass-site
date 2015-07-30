@@ -1,61 +1,62 @@
 ---
-title: Syntactically Awesome Style Sheets
-h1: CSS with superpowers
+title: Документация на русском языке
+meta_desc: Sass - документация на русском языке. Что такое sass или scss?
+meta_key: sass, scss, css, css3, html, ruby
+h1: CSS с суперсилой
 ---
 
 
 .hero-lockup
-  %p.hero-image= image_tag "illustrations/glasses.svg", height: "160", alt: "Glasses"
+  %p.hero-image= image_tag "illustrations/glasses.svg", height: "160", alt: "Очки"
   %p.introduction
-    Sass is the most mature, stable, and powerful professional grade CSS
-    extension language in the&nbsp;world.
+    Sass является наиболее развитым и стабильным расширением CSS профессионального уровня.
 
 - content_for :section_bottom do
   %ul.list-tiled
     %li
-      %h3 CSS Compatible
+      %h3 Совместимость с CSS
       %p
-        Sass is completely compatible with all versions of CSS. We take this
-        compatibility seriously, so that you can seamlessly use any available
-        CSS libraries.
+        Sass полностью совместим со всеми версиями CSS. Мы уделяем серьезное 
+        внимание совместимости, поэтому вы можете легко использовать любые 
+        доступные библиотеки CSS.
     %li
-      %h3 Feature Rich
+      %h3 Разнообразие функций
       %p
-        Sass boasts more features and abilities than any other CSS extension
-        language out there. The Sass Core Team has worked endlessly to not
-        only keep up, but stay&nbsp;ahead.
+        Sass может похвастаться большим количеством возможностей, чем любой 
+        другой язык расширения CSS. Команда Sass Core бесконечно работает
+        не только для поддержания этих возможностей, но и для того, чтобы быть
+        впереди.
     %li
-      %h3 Mature
+      %h3 Опыт
       %p
-        Sass has been actively supported for
-        = time_ago_in_words DateTime.parse("Tue Nov 28 19:43:58 2006 +0000")
-        by its loving Core&nbsp;Team.
+        Sass находится в активной разработке командой Sass Core более 8 лет и все это время
+        команда относится к этому процессу с любовью.
     %li
-      %h3 Industry Approved
+      %h3 Поддержка индустрией
       %p
-        Over and over again, the industry is choosing Sass as the premier CSS
-        extension language.
+        Снова и снова сообщество разработчиков выбирает Sass как главное средство
+        написания CSS.
     %li
-      %h3 Large Community
+      %h3 Большое сообщество
       %p
-        Sass is actively supported and developed by a consortium of several
-        tech companies and hundreds of developers.
+        Sass активно поддерживается и разрабатывается консорциумом
+        высокотехнологичных компаний и нескольких сотен разработчиков.
     %li
-      %h3 Frameworks
+      %h3 Фреймворки
       %p
-        There are endless number of frameworks built with Sass.
+        Есть бесконечное количество фреймворков, построенных на Sass.
         = succeed "," do
           = link_to "Compass", "http://compass-style.org/"
-        = succeed "," do
+        = succeed " и" do
           = link_to "Bourbon", "http://bourbon.io/"
-        and
-        = link_to "Susy", "http://susy.oddbird.net/"
-        just to name a&nbsp;few.
+        = succeed " -" do
+          = link_to "Susy", "http://susy.oddbird.net/"
+        это только несколько примеров из огромного количества проектов.
 
 - content_for :complementary do
   .get-started
-    %h3 Getting Started Is Easy
+    %h3 Начать легко
     %ol
-      %li= link_to "Install Sass", "install"
-      %li= link_to "Learn Sass", "guide"
-      %li= link_to "Get Involved", "community"
+      %li= link_to "Установка", "install"
+      %li= link_to "Основы SASS", "guide"
+      %li= link_to "Присоединяйся", "community"

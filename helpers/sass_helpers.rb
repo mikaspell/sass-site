@@ -6,7 +6,7 @@ module SassHelpers
     if data.page.title
       title << data.page.title
     else
-      title << "Syntactically Awesome Style Sheets"
+      title << "Синтаксически совершенные таблицы стилей"
     end
     title
   end

@@ -1,21 +1,6 @@
 = javascript_include_tag "vendor/modernizr-2.8.3.custom"
-= javascript_include_tag  "//use.typekit.net/pya1hgl.js"
-:javascript
-  try{Typekit.load();}catch(e){}
 
 = yield_content :js_head
-
--# Old version of analytics (https://developers.google.com/analytics/devguides/collection/gajs/).
-:javascript
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-535380-8']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
 -# New version of analytics (https://developers.google.com/analytics/devguides/collection/analyticsjs/).
 :javascript
@@ -24,5 +9,9 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-535380-14', 'sass-lang.com');
+  ga('create', 'UA-60543463-1', 'auto');
   ga('send', 'pageview');
+
+  (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter29028140 = new Ya.Metrika({id:29028140, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+
+<noscript><div><img src="//mc.yandex.ru/watch/29028140" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
