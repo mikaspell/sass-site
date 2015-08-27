@@ -23,7 +23,7 @@ page "/guide.html",                :layout => :layout_2_column
 page "/libsass.html",              :layout => :layout_2_column
 page "/sitemap.html",              :layout => :layout_2_column
 page "/community-guidelines.html", :layout => :layout_2_column
-page "/documentation/*",           :directory_index => false
+page "/documentation/*",           :layout => :docs, :directory_index => false
 
 with_layout :styleguide do
   page "/styleguide/*"
