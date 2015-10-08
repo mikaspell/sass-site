@@ -1,6 +1,7 @@
 require 'breakpoint'
 require 'builder'
 require 'middleman-syntax'
+require 'middleman-deploy'
 require 'susy'
 require 'typogruby'
 
@@ -29,6 +30,11 @@ with_layout :styleguide do
   page "/styleguide/*"
 end
 
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? {:class => 'active'} : {}
+  end
+end
 
 
 configure :development do
@@ -39,19 +45,23 @@ configure :development do
   end
 end
 
-
-
 configure :build do
-  activate :asset_hash
+  # activate :asset_hash
   # activate :gzip
-  activate :minify_css
-  activate :minify_html
-  activate :minify_javascript
+  # activate :minify_css
+  # activate :minify_html
+  # activate :minify_javascript
   activate :relative_assets
+
+  activate :robots, :rules => [
+    {:user_agent => '*', :allow => %w(/)}
+  ],
+  :sitemap => 'http://sass-scss.ru/sitemap.xml'
 
   set :relative_links, true
 
   compass_config do |config|
-    config.output_style = :compressed
+    config.output_style = :compact
+    config.line_comments = false
   end
 end

@@ -1,2 +1,4 @@
-User-agent: *
+User-Agent: *
 Allow: /
+
+Sitemap: http://sass-scss.ru/sitemap.xml

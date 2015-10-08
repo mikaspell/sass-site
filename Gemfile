@@ -12,7 +12,6 @@ group :development do
   gem "builder",               "~> 3.2.2"
   gem "middleman",             "~> 3.3.8"
   gem "middleman-blog",        "~> 3.5.3"
-  gem "middleman-livereload",  "~> 3.4.2"
   gem "middleman-syntax",      "~> 2.0.0"
   gem "normalize-rails",       "~> 3.0.1", :require => false
   gem "redcarpet",             "~> 3.2.2"
@@ -24,3 +23,7 @@ group :development do
 end
 
 gem "middleman-minify-html", "~> 3.4.0"
+gem "middleman-livereload"
+gem "middleman-pagination"
+gem "middleman-deploy", "~> 1.0"
+gem 'middleman-robots'

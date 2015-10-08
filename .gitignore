@@ -1,5 +1,5 @@
 ._*
-/build
+/build/*
 /.bundle
 bundle
 /.cache
