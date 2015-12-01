@@ -1,8 +1,8 @@
 ---
-title: Цвета и оформление
+title: Color & Theming
 ---
 
-%h2 Цвета бренда
+%h2 Brand Colors
 %ul.swatches
   - for swatch in data.color.colors
     %li{class: "swatch-" + swatch.name}
@@ -12,7 +12,7 @@ title: Цвета и оформление
           %br/
           = "#" + swatch.hex
 
-%h2 Использование
+%h2 Usage
 - for swatch in data.color.semantic_colors
   %dl.guide-description-list.swatches
     %dt

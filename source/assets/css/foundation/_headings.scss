@@ -36,8 +36,8 @@ h2 {
   }
 }
 
-// h2,
-// h3 { font-family: $font-family-display; }
+h2,
+h3 { font-family: $font-family-display; }
 
 #{headings(3, 4)} {
   @include padding-leader(1.5);

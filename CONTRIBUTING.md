@@ -1,6 +1,7 @@
 Contributing to the Sass website
 ================================
 
+**Please read the [Implementation Guide](http://sass-lang.com/implementation)**
 The Sass website is open source. See a bug or typo? Have an idea? Just do the
 following:
 
@@ -25,9 +26,21 @@ navigate to the project repo and run:
 
 ```
 bundle install
-middleman
+bundle exec middleman
 ```
 
+## Deploying
+
+If you're lucky enough to be one of our deployers, then just run the following
+command from master branch... and MAKE SURE YOUR WORKING COPY IS CLEAN!
+
+```
+rake deploy
+```
+
+It's that easy.
+
+If something goes wrong, make sure to run `rake clean`
 
 Thanks!
 
