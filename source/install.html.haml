@@ -1,69 +1,71 @@
 ---
-title: Install Sass
+title: Установка Sass
+meta_desc: Описание как установить sass и с помощью каких инструментов его можно использовать
+meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveReload, mixture, prepros, scout, terminal, командная строка, ruby, windows, linux, mac
 ---
 
-%h2 There are a couple of ways to start using&nbsp;Sass:
+%h2 Существует несколько способов начать использовать Sass:
 %ol.list-columns
   %li.gui-application
-    %h3 Applications
-    %p= image_tag "illustrations/mouse.svg", class: "header-image", height: "160", alt: "Mouse"
+    %h3 Приложения
+    %p= image_tag "illustrations/mouse.svg", class: "header-image", height: "160", alt: "Мышь"
     %p
-      There are a good many applications that will get you up and running
-      with Sass in a few minutes for Mac, Windows, and Linux. You can download
-      most of the applications for free but a few of them are paid apps
-      <small>(and totally worth it)</small>.
+      Есть множество приложений под Windows, Mac и Linux, которые помогут в освоении и работе с
+      Sass. Большинство из них бесплатные, но некоторые из них все-таки платные
+      <small>(но это того стоит)</small>.
 
     %ul.list-feature
       %li
         = link_to "CodeKit", "http://incident57.com/codekit/"
-        %span.info (Paid)
+        %span.info (Платно)
         %span.mac-icon
       %li
         = link_to "Compass.app", "http://compass.handlino.com/"
-        %span.info (Paid, Open Source)
+        %span.info (Условно-бесплатно)
         %span.mac-icon
         %span.windows-icon
         %span.linux-icon
       %li
         = link_to "Ghostlab", "http://www.vanamco.com/ghostlab/"
-        %span.info (Paid)
+        %span.info (Платно)
         %span.mac-icon
         %span.windows-icon
       %li
         = link_to "Hammer", "http://hammerformac.com/"
-        %span.info (Paid)
+        %span.info (Платно)
         %span.mac-icon
       %li
         = link_to "Koala", "http://koala-app.com/"
-        %span.info (Open Source)
+        %span.info (Бесплатно)
         %span.mac-icon
         %span.windows-icon
         %span.linux-icon
       %li
         = link_to "LiveReload", "http://livereload.com/"
-        %span.info (Paid, Open Source)
+        %span.info (Условно-бесплатно)
         %span.mac-icon
         %span.windows-icon
       %li
         = link_to "Prepros", "https://prepros.io/"
-        %span.info (Paid)
+        %span.info (Платно)
         %span.mac-icon
         %span.windows-icon
         %span.linux-icon
       %li
         = link_to "Scout", "http://mhs.github.io/scout-app/"
-        %span.info (Open Source)
+        %span.info (Бесплатно)
         %span.mac-icon
         %span.windows-icon
 
   %li.command-line-unix
-    %h3 Command Line
-    %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Keyboard"
+    %h3 Командная строка
+    %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Клавиатура"
     %dl#install-ruby-linux
       %dt Linux
       %dd
-        If you're using a distribution of Linux, you'll need to install Ruby
-        first. You can install Ruby through the apt package manager, rbenv, or rvm.
+        Если Вы используете операционную систему Linux, то в первую очередь
+        Вам необходимо установить Ruby. Установить Ruby можно через пакетные менеджеры
+        apt, rbenv или rvm.
         %pre
           :preserve
             sudo su -c "gem install sass"
@@ -71,69 +73,68 @@ title: Install Sass
     %dl#install-ruby-windows
       %dt Windows
       %dd
-        Before you start using Sass you will need to install Ruby. The fastest
-        way to get Ruby on your Windows computer is to use
-        <a href="http://rubyinstaller.org">Ruby Installer</a>. It's a
-        single-click installer that will get everything set up for you super
-        fast.
+        Перед тем, как начать пользоваться Sass Вам необходимо установить Ruby.
+        Самый быстрый способ установить Ruby на Windows — это использовать
+        <a href="http://rubyinstaller.org">установщик Ruby</a>. Эта установка
+        в один клик поможет Вам приступить к работе практически мгновенно.
 
       %dd
-        The installer will also install a Ruby command line
-        powershell application that will let you use the Ruby libraries.
+        Установщик также установит командую строку Ruby — приложение, которое
+        позволит использовать все библиотеки Ruby.
 
       %dl#install-ruby-mac
         %dt Mac
         %dd
-          If you prefer the command line over an application then getting Sass
-          set up is a fairly quick process. Sass has a Ruby dependency but if
-          you're using a Mac, congratulations, Ruby comes pre-installed.
+          Если вы предпочитаете командную строку нежели приложения, то настройка Sass
+          для работы занимает считанные минуты. Так как Sass зависим от Ruby, а Вы
+          пользователь Mac, поздравляем, Ruby уже предустановлен по-умолчанию.
 
       %dl
-        %dt Install Sass
+        %dt Установка Sass
         %dd
           %p
-            Here's the quickest way we've found to start using Sass by using
-            the command line:
+            Это самый быстрый способ, чтобы начать использовать Sass с помощью командной
+            строки:
 
           %ol
             %li
               %p
-                <strong>Open your Terminal or Command Prompt.</strong> On the
-                Mac the Terminal.app comes installed by default. It's located
-                in your "Utilities" folder. On Windows, run `cmd`.
+                <strong>Откройте терминал или командную строку.</strong>
+                На Mac Terminal.app установлен по умолчанию и находится в папке
+                «Программы». В Windows запустите команду `cmd`.
 
             %li
               %p
-                <strong>Install Sass.</strong> Ruby uses Gems to manage its
-                various packages of code like Sass. In your open terminal
-                window type:
+                <strong>Установка Sass.</strong> Ruby использует gem для управления
+                различными пакетами такими как Sass. В открытом терминале наберите команду:
               %pre
                 :preserve
                   gem install sass
               %p
-                This will install Sass and any dependencies for you. It's pretty
-                magical. If you get an error message then it's likely you will need to use the <code>sudo</code> command to install the Sass gem. It would look like:
+                Таким способом можно установить Sass и любые другие пакеты. Это
+                просто магия =). Если у Вас отображается ошибка, в которой говорится
+                о том, что нужно использовать команду <code>sudo</code> для установки
+                пакета Sass, то введите в терминале:
               %pre
                 :preserve
                   sudo gem install sass
 
             %li
               %p
-                <strong>Double-check.</strong> You should now have Sass
-                installed, but it never hurts to double-check. In your
-                terminal application you can type:
+                <strong>Наличие пакета.</strong> Теперь у Вас должен быть
+                установлен пакет Sass, но если хотите Вы можете проверить это.
+                В терминале наберите команду:
               %pre
                 :preserve
                   sass -v
               - if data.respond_to?(:version)
-                %p It should return <code>Sass #{data.version.number} (#{data.version.name})</code>. Congratulations! You've successfully installed Sass.
+                %p В ответ вы должны получить <code>Sass #{data.version.number} (#{data.version.name})</code>. Поздравляем! Sass успешно установлен.
               - else
-                %p It should return <code>Sass ???</code>. Congratulations! You've successfully installed Sass.
+                %p В ответ вы должны получить <code>Sass ???</code>. Поздравляем! Sass успешно установлен.
 
             %li
               %p
-                <strong>Go and play.</strong> If you're brand new to Sass
-                we've set up some resources to help you learn pretty darn
-                quick.
+                <strong>Развлекайтесь.</strong> Если Вы новичок в Sass, то для Вас
+                мы подготовили много ресурсов, которые помогут быстро изучить Sass.
 
-              %p= link_to "Learn More About Sass", "/guide", :class => "button primary"
+              %p= link_to "Узнать больше о Sass", "/guide", :class => "button primary"
