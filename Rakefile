@@ -1,3 +1,6 @@
+
+# This is a helper function that properly sets up
+# the environment in the .sass folder for bundle commands to work
 def bundle(cmd)
   old_bundle_gemfile = ENV["BUNDLE_GEMFILE"]
   ENV.delete("BUNDLE_GEMFILE")
@@ -6,13 +9,13 @@ ensure
   ENV["BUNDLE_GEMFILE"]
 end
 
+
 task :sass do
   unless Dir.exists?(".sass")
     sh %{git clone git://github.com/sass/sass .sass}
   end
 
   Dir.chdir(".sass") do
-    sh %{rm -f Gemfile}
     sh %{git fetch}
     if ENV["SASS_REVISION"]
       sh %{git checkout #{ENV["SASS_REVISION"]}}
@@ -22,18 +25,7 @@ task :sass do
       sh %{git checkout #{File.read("VERSION").strip}}
     end
 
-    # Stable doesn't have a Gemfile, but it needs one to avoid using
-    # this package's Gemfile. This should be removed when 3.3 is
-    # released.
-    File.open('Gemfile', 'w') do |f|
-      f.puts <<GEMFILE
-source "https://rubygems.org"
-gemspec
-gem 'rake'
-GEMFILE
-    end
-
-    bundle 'install'
+    bundle %{install}
   end
 end
 
@@ -46,7 +38,7 @@ end
 
 task :sass_docs => :sass do
   ENV["RUBOCOP"] = "false"
-  Dir.chdir(".sass") {bundle %{exec rake doc}}
+  Dir.chdir(".sass") { bundle %{exec rake doc}}
   sh %{rm -rf source/documentation}
   sh %{cp -r .sass/doc source/documentation}
   Dir['source/documentation/**/*.html'].each do |path|
@@ -60,7 +52,7 @@ task :import_sass => [:sass_version, :sass_docs]
 
 desc "Build the middleman-controlled portion of the site."
 task :middleman do
-  sh %{middleman build --verbose}
+  sh %{bundle exec middleman build --verbose}
 end
 
 desc "Build the site."
@@ -83,5 +75,10 @@ task :upload do
   sh %{git checkout master}
 end
 
+task :clean do
+  sh %{rm -rf .sass build}
+end
+
 desc "Deploy the site to heroku."
 task :deploy => [:build, :upload]
+task :deploy_clean => [:clean, :build, :upload]

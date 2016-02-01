@@ -1,17 +1,17 @@
 ---
-title: "Что-то произошло не так :("
+title: "Not found :("
 ---
 
 - content_for :css do
   = stylesheet_link_tag "404"
 
 - content_for :introduction do
-  Извините, но запрашиваемая Вами страница не найдена.
+  Sorry, but the page you were trying to view does not exist.
 
-%p Похожие результаты:
+%p It looks like this was the result of either:
 %ul
-  %li ошибочно набранные адреса
-  %li несуществующие ссылки
+  %li a mistyped address.
+  %li an out-of-date link.
 
 - content_for :complementary do
   :javascript
