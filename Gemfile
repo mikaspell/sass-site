@@ -10,7 +10,6 @@ group :development do
   gem "breakpoint",            "~> 2.5.0"
   gem "builder",               "~> 3.2.2"
   gem 'middleman',             '~> 3.4.1'
-  gem 'middleman-autoprefixer','~> 2.6.2'
   gem "middleman-blog",        "~> 3.5.3"
   gem 'middleman-blog-ui',     '~> 0.1.0'
   gem "middleman-syntax",      "~> 2.0.0"
@@ -27,5 +26,6 @@ end
 
 gem "middleman-minify-html",   "~> 3.4.1"
 gem 'middleman-livereload',    '~> 3.4.5'
+gem 'middleman-autoprefixer','~> 2.6.2'
 gem "middleman-deploy", "~> 1.0"
 gem 'middleman-robots'
