@@ -1,5 +1,5 @@
 !!!5
-%html.no-js(lang="en"){:class => data.page.head_classes}
+%html.no-js(lang="ru"){:class => data.page.head_classes}
   %head
     %meta(charset="utf-8")/
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")/
@@ -46,12 +46,12 @@
 
               - content_for :complementary do
                 - root_url = data.sitemap.url
-                %h3= link_to "Style Guide", "/styleguide"
+                %h3= link_to "Руководство по стилю", "/styleguide"
                 %ul
                   - sitemap.resources.each do |page|
                     - if page.url =~ /styleguide/
                       - unless page.url =~ /assets/
-                        - unless page.data.title == "Style Guide"
+                        - unless page.data.title == "Руководство по стилю"
                           - unless page.data.title == "Responsive Test"
                             %li= link_to "#{page.data.title}", "#{root_url}#{page.url.gsub!(/(\/)+$/,'')}"
 
@@ -68,12 +68,12 @@
         .container
           %ul
             - if data.respond_to?(:version)
-              %li Current Release: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
+              %li Текущая версия: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
             - else
-              %li Current Release: <span class="release-name">???</span>
-            %li= link_to "Release Notes", "/documentation/file.SASS_CHANGELOG.html"
-            %li= link_to "Fork on Github", "https://github.com/sass/sass"
-            %li= link_to "Implementation Guide", "implementation"
+              %li Текущая версия: <span class="release-name">???</span>
+            %li=link_to "Документация", "/documentation/index.html"
+            %li=link_to "Fork on Github", "https://github.com/sass/sass"
+            -# %li= link_to "Implementation Guide", "implementation"
 
       - if content_for?(:section_bottom)
         %section.section-bottom
