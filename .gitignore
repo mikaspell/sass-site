@@ -1,4 +1,5 @@
 ._*
+/.idea
 /build/*
 /.bundle
 bundle

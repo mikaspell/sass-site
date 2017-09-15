@@ -48,6 +48,7 @@ end
 
 configure :development do
   activate :livereload
+  config[:file_watcher_ignore] += [/.idea\//]
 end
 
 configure :build do
