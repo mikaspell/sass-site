@@ -1,0 +1,124 @@
+{
+  "ads": [
+    {
+      "id": 1,
+      "name": "Нетология",
+      "url": "https://ad.admitad.com/g/2e18aead5bfcba87c5b93a47696a87/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/2e18aead5bfcba87c5b93a47696a87/"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Нетология",
+      "url": "https://ad.admitad.com/g/467bfae511fcba87c5b93a47696a87/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/467bfae511fcba87c5b93a47696a87/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Нетология",
+      "url": "https://ad.admitad.com/g/ya\"w\"6zhr0lmfcba87c5b93a47696a87/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/ya\"w\"6zhr0lmfcba87c5b93a47696a87/"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Нетология",
+      "url": "https://ad.admitad.com/g/xi2aifi2orfcba87c5b93a47696a87/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/xi2aifi2orfcba87c5b93a47696a87/"
+      }
+    },
+    {
+      "id": 5,
+      "name": "skyeng.ru",
+      "url": "https://ad.admitad.com/g/p9xlcaeew0fcba87c5b986cd98cf0a/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/p9xlcaeew0fcba87c5b986cd98cf0a/"
+      }
+    },
+    {
+      "id": 6,
+      "name": "skyeng.ru",
+      "url": "https://ad.admitad.com/g/62co8ofjxrfcba87c5b986cd98cf0a/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/62co8ofjxrfcba87c5b986cd98cf0a/"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Техносила",
+      "url": "https://ad.admitad.com/g/7mnhzql6g4fcba87c5b9e20a1b9cd2/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/7mnhzql6g4fcba87c5b9e20a1b9cd2/"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Техносила",
+      "url": "https://ad.admitad.com/g/svl7n91cgmfcba87c5b9e20a1b9cd2/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/svl7n91cgmfcba87c5b9e20a1b9cd2/"
+      }
+    },
+    {
+      "id": 9,
+      "name": "RU VDS",
+      "url": "https://ad.admitad.com/g/e6msvcnoj6fcba87c5b9a1e79b955d/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/e6msvcnoj6fcba87c5b9a1e79b955d/"
+      }
+    },
+    {
+      "id": 10,
+      "name": "RU VDS",
+      "url": "https://ad.admitad.com/g/she6cdqfq0fcba87c5b9a1e79b955d/?i=4",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://ad.admitad.com/b/she6cdqfq0fcba87c5b9a1e79b955d/"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Reg.ru",
+      "url": "https://www.reg.ru/domain/new/?rid=107671",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://www.reg.ru/i/affiliate/BanDomen_728x90_regru.gif"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Reg.ru",
+      "url": "https://hosting.reg.ru/?rid=107671",
+      "img": {
+        "w": 728,
+        "h": 90,
+        "src": "https://www.reg.ru/i/affiliate/BanHosting_728x90_regru.gif"
+      }
+    }
+  ]
+}
