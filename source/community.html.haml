@@ -50,15 +50,10 @@ meta_key: sass, scss, codeschool, css-tricks, less, bower, book, compass, susy, 
         %p= article.description
 
   %h2#Contribute Вклад в развитие
-  %p Sass — проект с открытым исходным кодом и мы призываем Вас внести свой вклад.
-  Вы можете внести свою лепту с помощью [сообщений об ошибках, общений с пожеланиями][issues], ну а если у Вас есть реальное решение,
-  которое может нам всем помочь, то Вы останетесь в наших сердцах навсегда. Если вы хотите нам помочь, но не знаете как,
-  то тег [Help Wanted][help] в трекере ошибок поможет вам увидеть задачи, по которым требуется помощь. Под этим тегом
-  вы найдете множество запросов на добавление новых возможностей, багов и других задач, которые не требуют интенсивной
-  разработки, и по мнению разработчиков такие задачи - хорошее место для новых участников разработки.
 
   :markdown
-    Sass — [проект с открытым исходным кодом][github] и мы призываем Вас внести свой вклад. Вы можете внести свою лепту с помощью [сообщений об ошибках, общений с пожеланиями][issues], ну а если у Вас есть реальное решение,
+    Sass — [проект с открытым исходным кодом][github] и мы призываем Вас внести свой вклад. Вы можете внести свою лепту
+    с помощью [сообщений об ошибках и пожеланий][issues], ну а если у Вас есть реальное решение,
     которое может нам всем помочь, то Вы останетесь в наших сердцах навсегда. Если вы хотите нам помочь, но не знаете как,
     то тег [Help Wanted][help] в трекере ошибок поможет вам увидеть задачи, по которым требуется помощь. Под этим тегом
     вы найдете множество запросов на добавление новых возможностей, багов и других задач, которые не требуют интенсивной
@@ -68,73 +63,62 @@ meta_key: sass, scss, codeschool, css-tricks, less, bower, book, compass, susy, 
     [issues]: https://github.com/sass/sass/issues
     [help]: https://github.com/sass/sass/labels/Help%20Wanted
 
-    When writing code, there are two primary branches we use. The [stable
-    branch][github] is the default; is where we do development on the released
-    version of Sass. Bug fixes for released functionality, documentation
-    improvements, and and general infrastructure stuff should all go on
-    stable. The [master branch][master] is where we work on the next version
-    of Sass. Once you've followed the steps below, new features should be
-    submitted to master.
+    Для написания кода мы используем две основные ветки. [Stable][github] - ветка по умолчанию, здесь мы ведем разработку
+    над уже выпещенной версией Sass. Правка багов в реализованой функциональности, обновление документации и общие глобальные
+    задачи - все это происходит в ветке stable. [Master][master] - ветка, где мы работаем над следуещей версией Sass. Все
+    новые возможности должны быть отправлены в ветку master.
 
     [master]: https://github.com/sass/sass/tree/master
     [planned]: https://github.com/sass/sass/labels/Planned
 
-    The Sass codebase is pretty big, and it can be intimidating to navigate it
-    and understand the best way to make a change. If you need help, make a
-    post on [the Sass mailing list][list]; the Sass developers are happy to
-    assist, even if you don't have much experience with Ruby or programming as
-    a whole. They can answer questions about how the system works, suggest
-    avenues for solving problems, and review your code once it's written.
+    Кодовая база Sass очень большая, что может напугать при навигации по ней и усложнить понимание лучших путей развития.
+    Если вам нужна помощь, то вы можете создать новую запись в [системе приема обращений Sass][list] и разработчики Sass
+    будут рады помочь вам, даже если у вас небольшой опыт с Ruby или с программированием в общем. Они могут ответить на
+    вопросы о том, как работает система, предлагать вам пути решения проблем, а также проверить ваш код, если вы предлагаете
+    свое решение.
 
     [list]: https://groups.google.com/forum/#!forum/sass-lang
 
-    Whether you're adding a feature or fixing a bug, if it changes publicly
-    visible behavior, it's important to write automated tests for it. All the
-    tests live in the `test/sass` directory; find the test file that's most
-    closely related to your change, and add a test or tests there. For a
-    feature, make sure your tests fully cover all the ways that feature could
-    be used, including ways it could be invalid.
+    Независимо от того, добавляете ли вы новую возможность или исправляете баг, если это меняет общедоступное поведение, то
+    очень важно для изменения создать автоматизированный тест. Все тесты находятся в папке `test/sass`; найдите наиболее
+    подходящий файл с тестами для ваших изменений и добавьте туда свой тест или тесты. Вы должны быть уверены, что тесты
+    покрыващие функциональности должны учитывать все варианты исхода событий в них и даже те, которые могут быть неверными.
 
-    Once you've written a patch with tests, send it to us as a
-    [pull request][]. A developer will look it over, and will probably make
-    some suggestions and requests. Once you address those, it'll get merged
-    in!
+    После того, как вы написали патч с тестами, пришлите нам его через [pull request][]. Наш разработчик изучит его, при
+    необходимости задаст вопросы или предложит лучшие варианты. После всех утверждений ваш патч будет применен.
 
     [pull request]: https://help.github.com/articles/creating-a-pull-request/
 
-  %h2#AddingSyntax Adding Syntax
+  %h2#AddingSyntax Добавление синтаксиса
 
   :markdown
-    The biggest and most impressive features of Sass usually involve adding
-    new syntax of some sort. This can be pretty fun—something that used to be
-    an error starts working because you made it—but syntax changes are also a
-    lot of work. For statement-level syntax like a new `@`-rule, you have to:
+    Самые большие и наиболее впечатляющие возможности Sass обычно позволяют добавлять в себя новый синтаксис. Это может быть
+    очень круто: что-то что раньше при работе выдавало ошибку может начать работать правильно, потому что вы сделали это.
+    Однако, изменение синтаксиса это еще и большой объем работы. Для добавления нового синтаксиса на уровне `@`-правила
+    вам понадобится:
 
-    * Add a node for the syntax to the abstract syntax tree in
+    * Добавить ноду(узел) синтаксиса в дерево абстрактного синтаксиса в
       [`lib/sass/tree`][tree].
 
-    * Parse the syntax in SCSS to the node. The SCSS parser is in
+    * Парсить синтаксис SCSS в ноды(узлы). Парсер SCSS находится в
       [`lib/sass/scss/parser.rb`][scss parser].
 
-    * Parse the syntax in the indented syntax to the node. The indented
-      syntax parser is in [`lib/sass/engine.rb`][sass parser].
+    * Парсить синтаксис Sass в ноды(узлы). Парсер Sass находится в
+      [`lib/sass/engine.rb`][sass parser].
 
-    * Add support for setting the compilation options on the node in
+    * Добавить поддержку настроек компиляции в ноду в
       [`lib/sass/tree/visitors/set_options.rb`][set options].
 
-    * Add support for cloning the node in
+    * Добавить поддержку клонирования ноды в
       [`lib/sass/tree/visitors/deep_copy.rb`][deep copy].
 
-    * If the syntax is just something new from pure CSS, add support for
-      compiling it to CSS in [`lib/sass/tree/visitors/to_css.rb`][to css]. If
-      it's for a Sass feature that's not part of CSS, add runtime behavior in
-      [`lib/sass/tree/visitors/perform.rb`][perform] or
-      [`lib/sass/tree/visitors/cssize.rb`][cssize].
+    * Если синтаксис изменения это простой CSS, то добавить поддержку компиляции в CSS в [`lib/sass/tree/visitors/to_css.rb`][to css].
+      Если это изменение для Sass и оно не является частью CSS, то нужно описать поведение во время работы в
+      [`lib/sass/tree/visitors/perform.rb`][perform] или [`lib/sass/tree/visitors/cssize.rb`][cssize].
 
-    * Add support for converting the syntax back to SCSS and the indented
-      syntax with `sass-convert` in
+    * Добавить поддержку обратной конвертации синтаксиса в SCSS и Sass для команды `sass-convert` в
       [`lib/sass/tree/visitors/convert.rb`][convert].
-      Don't forget to test this conversion, too!
+      Это тоже необходимо покрыть тестом!
 
     [tree]: https://github.com/sass/sass/tree/stable/lib/sass/tree
     [script tree]: https://github.com/sass/sass/tree/stable/lib/sass/script/tree
