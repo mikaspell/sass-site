@@ -54,7 +54,7 @@
         .container
           %ul
             - if data.respond_to?(:version)
-              %li Текущая версия: <span class="release-name">#{data.version.name} (#{data.version.number})</span>
+              %li Текущая версия: <span class="release-name">#{data.version.number}</span>
             - else
               %li Текущая версия: <span class="release-name">???</span>
             %li=link_to "Документация", "/documentation/index.html"

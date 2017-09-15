@@ -20,7 +20,7 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
         %span.info (Платно)
         %span.mac-icon
       %li
-        = link_to "Compass.app", "http://compass.handlino.com/"
+        = link_to "Compass.app", "http://compass.kkbox.com/"
         %span.info (Условно-бесплатно)
         %span.mac-icon
         %span.windows-icon
@@ -52,10 +52,11 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
         %span.windows-icon
         %span.linux-icon
       %li
-        = link_to "Scout", "http://mhs.github.io/scout-app/"
+        = link_to "Scout-App", "http://scout-app.io/"
         %span.info (Бесплатно)
-        %span.mac-icon
         %span.windows-icon
+        %span.linux-icon
+        %span.mac-icon
 
   %li.command-line-unix
     %h3 Командная строка
@@ -68,7 +69,7 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
         apt, rbenv или rvm.
         %pre
           :preserve
-            sudo su -c "gem install sass"
+            sudo gem install sass --no-user-install
 
     %dl#install-ruby-windows
       %dt Windows
@@ -128,9 +129,11 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
                 :preserve
                   sass -v
               - if data.respond_to?(:version)
-                %p В ответ вы должны получить <code>Sass #{data.version.number} (#{data.version.name})</code>. Поздравляем! Sass успешно установлен.
+                %p В ответ вы должны получить <code>Sass #{data.version.number} </code>.
+                Congratulations! You've successfully installed Sass.
               - else
-                %p В ответ вы должны получить <code>Sass ???</code>. Поздравляем! Sass успешно установлен.
+                %p В ответ вы должны получить <code>Sass ???</code>. Congratulations!
+                You've successfully installed Sass.
 
             %li
               %p

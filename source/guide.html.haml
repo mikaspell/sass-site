@@ -35,7 +35,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass-файл и сохраняет его как простой CSS-файл,
       который Вы сможете использовать на любом сайте.
 
-      The most direct way to make this happen is in your terminal. Once Sass is installed, you can run `sass input.scss output.css` from your terminal. You can watch either individual files or entire directories. In addition, you can watch folders or directories with the `--watch` flag. An example of running Sass while watching an entire directory is the following:
+      The most direct way to make this happen is in your terminal. Once Sass is
+      installed, you can run `sass input.scss output.css` from your terminal.
+      You can watch either individual files or entire directories. In addition,
+      you can watch folders or directories with the `--watch` flag. An example
+      of running Sass while watching an entire directory is the following:
 
     ~ partial "code-snippets/homepage-sass-watch"
 
@@ -50,11 +54,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       вы хотите использовать. Чтобы создать переменную в Sass нужно использовать символ <code>$</code>. Рассмотрим пример:
 
     %ul
-      %li= link_to "Scss", "#topic-2-SCSS"
+      %li= link_to "SCSS", "#topic-2-SCSS"
       %li= link_to "Sass", "#topic-2-Sass"
 
     #topic-2-SCSS
-      %h3 Синтаксис Scss
+      %h3 Синтаксис SCSS
       ~ partial "code-snippets/homepage-variables-scss"
 
     #topic-2-Sass
@@ -83,7 +87,7 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       Чтобы понять что мы имеем ввиду, приведем типичный пример стилей навигации на сайте:
 
     %ul
-      %li= link_to "Scss", "#topic-3-SCSS"
+      %li= link_to "SCSS", "#topic-3-SCSS"
       %li= link_to "Sass", "#topic-3-Sass"
 
     #topic-3-SCSS
@@ -131,11 +135,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       хотим импортировать <code>\_reset.scss</code> в <code>base.scss</code>.
 
     %ul
-      %li= link_to "Scss", "#topic-5-SCSS"
+      %li= link_to "SCSS", "#topic-5-SCSS"
       %li= link_to "Sass", "#topic-5-Sass"
 
     #topic-5-SCSS
-      %h3 Синтаксис Scss
+      %h3 Синтаксис SCSS
       ~ partial "code-snippets/homepage-import-1-scss"
       ~ partial "code-snippets/homepage-import-2-scss"
 
@@ -146,8 +150,9 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
 
     :markdown
 
-      Обратите внимание на то, что мы используем <code>@import 'reset';</code> в <code>base.scss</code> файле. Когда вы импортируете
-      файл, то не нужно указывать расширение <code>.scss</code>. Sass — умный язык и он сам догадается. Когда CSS сгенерируется вы получите:
+      Обратите внимание на то, что мы используем <code>@import 'reset';</code> в <code>base.scss</code> файле. Когда вы
+      импортируете файл, то не нужно указывать расширение <code>.scss</code>. Sass — умный язык и он сам догадается.
+      Когда CSS сгенерируется вы получите:
 
     ~ partial "code-snippets/homepage-import-css"
 
@@ -162,11 +167,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       использовать по нескольку раз на сайте. Хорошо использовать миксины для вендорных префиксов. Пример для <code>border-radius</code>:
 
     %ul
-      %li= link_to "Scss", "#topic-6-SCSS"
+      %li= link_to "SCSS", "#topic-6-SCSS"
       %li= link_to "Sass", "#topic-6-Sass"
 
     #topic-6-SCSS
-      %h3 Синтаксис Scss
+      %h3 Синтаксис SCSS
       ~ partial "code-snippets/homepage-mixins-scss"
 
     #topic-6-Sass
@@ -174,7 +179,6 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       ~ partial "code-snippets/homepage-mixins-sass"
 
     :markdown
-
       Для создания миксина используйте директиву <code>@mixin</code> + название этого миксина. Мы назвали наш миксин
       <code>border-radius</code>. Также, в миксине мы используем переменную <code>$radius</code> внутри скобок, тем самым
       позволяя себе передавать в переменной все, что захотим. После того, как вы создали миксин, вы можете его использовать
@@ -187,18 +191,18 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
 
   %li#topic-7
     :markdown
-      ## Наследование
+      ## Расширение/Наследование
 
       Это одна из самых полезных функций Sass. Используя директиву <code>@extend</code> можно наследовать наборы свойств
       CSS от одного селектора другому. Это позволяет держать ваш Sass-файл в «чистоте». В нашем примере мы покажем вам как
       сделать стили оповещений об ошибках, предупреждениях и удачных исходов.
 
     %ul
-      %li= link_to "Scss", "#topic-7-SCSS"
+      %li= link_to "SCSS", "#topic-7-SCSS"
       %li= link_to "Sass", "#topic-7-Sass"
 
     #topic-7-SCSS
-      %h3 Синтаксис Scss
+      %h3 Синтаксис SCSS
       ~ partial "code-snippets/homepage-extend-scss"
 
     #topic-7-Sass
@@ -206,7 +210,6 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       ~ partial "code-snippets/homepage-extend-sass"
 
     :markdown
-
       Вышеуказанный код позволяет взять свойства CSS из <code>.message</code> и применить их в <code>.success</code>, <code>.error</code>
       и <code>.warning</code>. Во время компиляции CSS-файла работает магия, которая поможет вам избежать написания лишних классов
       в HTML элементах. Результат выглядит вот так:
@@ -224,11 +227,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       `aside` и `article`.
 
     %ul
-      %li= link_to "Scss", "#topic-8-SCSS"
+      %li= link_to "SCSS", "#topic-8-SCSS"
       %li= link_to "Sass", "#topic-8-Sass"
 
     #topic-8-SCSS
-      %h3 Синтаксис Scss
+      %h3 Синтаксис SCSS
       ~ partial "code-snippets/homepage-operators-scss"
 
     #topic-8-Sass
@@ -236,7 +239,6 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       ~ partial "code-snippets/homepage-operators-sass"
 
     :markdown
-
       Мы создали простую адаптивную модульную сетку, с шириной в 960 пикселей. Используя математические операторы, мы
       использовали полученные данные с пиксельными значениями и конвертировали их в процентные, причем без особых усилий.
       Скомпилированный CSS выглядит так:
