@@ -83,9 +83,12 @@ projects:
   - name: "SassDoc"
     url: "http://sassdoc.com/"
     description: "A documentation tool for Sass"
-  - name: "SomeGrids"
-    url: "https://github.com/mikaspell/SomeGrids"
-    description: "Simple, Awesome & Fast Sass grids with different display types"
+  - name: "SassMe"
+    url: "http://jim-nielsen.com/sassme/"
+    description: "Visualize Sass color function output in real-time — no compiling!"
+  - name: "sass-extract"
+    url: "https://github.com/jgranstrom/sass-extract"
+    description: "Extract Sass variables for use in JavaScript"
 
 articles:
   - name: "Почему Sass?"

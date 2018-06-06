@@ -27,16 +27,7 @@
           %section.section-middle
             .container= yield_content :section_middle
 
-      .alert.release
-        .container
-          %ul
-            - if data.respond_to?(:version)
-              %li Текущая версия: <span class="release-name">#{data.version.number}</span>
-            - else
-              %li Текущая версия: <span class="release-name">???</span>
-            %li=link_to "Документация", "/documentation"
-            %li=link_to "Fork on Github", "https://github.com/sass/sass"
-            -# %li= link_to "Руководство по внедрению", "implementation"
+      = partial "layouts/regions/release"
 
       - if content_for?(:section_bottom)
         %section.rek(style="padding-top: 1.5em" )

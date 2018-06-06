@@ -40,6 +40,13 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
 
     ~ partial "code-snippets/libsass-execute"
 
+  %li#crystal
+    :markdown
+      ### Crystal
+      [sass.cr](https://github.com/straight-shoota/sass.cr)
+      is a LibSass wrapper for the
+      [Crystal programming language](https://crystal-lang.org/).
+
   %li#go
     :markdown
       ### Go
@@ -62,7 +69,9 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
   %li#javascript
     :markdown
       ### JavaScript
-      Единственная чистая реализация на JavaScript — это [sass.js](https://github.com/medialize/sass.js). Также существует возможность [протестировать её в браузере](http://medialize.github.io/playground.sass.js/).
+      The [sass.js](https://github.com/medialize/sass.js) project makes
+      LibSass available as pure JavaScript. There's a way to [test it in the
+      browser](http://medialize.github.io/playground.sass.js/), too.
 
   %li#lua
     :markdown
@@ -96,8 +105,11 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
   %li#python
     :markdown
       ### Python
-      Существуют два регулярно обновляющихся проекта для языка Python. Проект [libsass-python](https://github.com/dahlia/libsass-python)
-      (узнать больше можно [на его сайте](http://hongminhee.org/libsass-python/)) и проект [python-scss](https://github.com/pistolero/python-scss).
+      There are two Python projects that are updated regularly. The
+      [libsass-python](https://github.com/dahlia/libsass-python) project (there
+      are more details on
+      [its own website](http://hongminhee.org/libsass-python/)) and the
+      [python-scss](https://github.com/pistolero/python-scss) project.
 
       Два других проекта для Python, [pylibsass](https://github.com/rsenk330/pylibsass) и [SassPython](https://github.com/marianoguerra/SassPython),
       некоторое время не обновлялись.
@@ -106,6 +118,12 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
     :markdown
       ### Ruby
       libSass также был обратно портирован на Ruby в проекте [sassc-ruby](https://github.com/sass/sassc-ruby).
+
+  %li#rust
+    :markdown
+      ### Rust
+      The [`sass_rs`](https://github.com/compass-rs/sass-rs) crate is a
+      LibSass wrapper and is updated regularly.
 
   %li#scala
     :markdown
@@ -126,6 +144,7 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
   %h3 Оболочки
   %ul.anchors
     %li= link_to "SassC",      "#sassc"
+    %li= link_to "Crystal",    "#crystal"
     %li= link_to "Go",         "#go"
     %li= link_to "Java",       "#java"
     %li= link_to "JavaScript", "#javascript"

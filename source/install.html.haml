@@ -58,86 +58,69 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
         %span.linux-icon
         %span.mac-icon
 
-  %li.command-line-unix
-    %h3 Командная строка
-    %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Клавиатура"
-    %dl#install-ruby-linux
-      %dt Linux
+  %li.command-line
+    %h3 Command Line
+    %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Keyboard"
+
+    :markdown
+      When you install Sass on the command line, you'll be able to run the
+      `sass` executable to compile `.sass` and `.scss` files to `.css` files.
+      For example:
+
+          sass source/stylesheets/index.scss build/stylesheets/index.css
+
+      First install Sass using one of the options below, then run
+      `sass --version` to be sure it installed correctly. If it did, this will
+      include `#{impl_version(:dart)}`. You can also run `sass --help` for more
+      information about the command-line interface.
+
+      Once it's all set up, <strong>go and play</strong>. If you're brand new to
+      Sass we've set up some resources to help you learn pretty darn quick.
+
+    %p= link_to "Learn More About Sass", "/guide", :class => "button primary"
+
+    %dl
+      %dt Install Anywhere (Standalone)
       %dd
-        Если Вы используете операционную систему Linux, то в первую очередь
-        Вам необходимо установить Ruby. Установить Ruby можно через пакетные менеджеры
-        apt, rbenv или rvm.
+        You can install Sass on Windows, Mac, or Linux by downloading the
+        package for your operating system
+        #{link_to "from GitHub", release_url(:dart)} and
+        <a href="https://katiek2.github.io/path-doc/">adding it to your
+        <code>PATH</code></a>. That's all—there are no external dependencies and
+        nothing else you need to install.
+
+      %dt Install Anywhere (npm)
+      %dd
+        %p
+          If you use Node.js, you can also install Sass using
+          <a href="https://www.npmjs.com/">npm</a> by running
+
         %pre
           :preserve
-            sudo gem install sass --no-user-install
+            npm install -g sass
 
-    %dl#install-ruby-windows
-      %dt Windows
+        <strong>However, please note</strong> that this will install the pure
+        JavaScript implementation of Sass, which runs somewhat slower than the
+        other options listed here. But it has the same interface, so it'll be
+        easy to swap in another implementation later if you need a bit more
+        speed!
+
+      %dt Install on Windows (Chocolatey)
       %dd
-        Перед тем, как начать пользоваться Sass Вам необходимо установить Ruby.
-        Самый быстрый способ установить Ruby на Windows — это использовать
-        <a href="http://rubyinstaller.org">установщик Ruby</a>. Эта установка
-        в один клик поможет Вам приступить к работе практически мгновенно.
+        %p
+          If you use <a href="https://chocolatey.org/">the Chocolatey package
+          manager</a> for Windows, you can install Dart Sass by running
 
+        %pre
+          :preserve
+            choco install sass
+
+      %dt Install on Mac OS X (Homebrew)
       %dd
-        Установщик также установит командую строку Ruby — приложение, которое
-        позволит использовать все библиотеки Ruby.
+        %p
+          If you use <a href="https://brew.sh/">the Homebrew package
+          manager</a> for Mac OS X, you can install Dart Sass by running
 
-      %dl#install-ruby-mac
-        %dt Mac
-        %dd
-          Если вы предпочитаете командную строку нежели приложения, то настройка Sass
-          для работы занимает считанные минуты. Так как Sass зависим от Ruby, а Вы
-          пользователь Mac, поздравляем, Ruby уже предустановлен по-умолчанию.
-
-      %dl
-        %dt Установка Sass
-        %dd
-          %p
-            Это самый быстрый способ, чтобы начать использовать Sass с помощью командной
-            строки:
-
-          %ol
-            %li
-              %p
-                <strong>Откройте терминал или командную строку.</strong>
-                На Mac Terminal.app установлен по умолчанию и находится в папке
-                «Программы». В Windows запустите команду `cmd`.
-
-            %li
-              %p
-                <strong>Установка Sass.</strong> Ruby использует gem для управления
-                различными пакетами такими как Sass. В открытом терминале наберите команду:
-              %pre
-                :preserve
-                  gem install sass
-              %p
-                Таким способом можно установить Sass и любые другие пакеты. Это
-                просто магия =). Если у Вас отображается ошибка, в которой говорится
-                о том, что нужно использовать команду <code>sudo</code> для установки
-                пакета Sass, то введите в терминале:
-              %pre
-                :preserve
-                  sudo gem install sass
-
-            %li
-              %p
-                <strong>Наличие пакета.</strong> Теперь у Вас должен быть
-                установлен пакет Sass, но если хотите Вы можете проверить это.
-                В терминале наберите команду:
-              %pre
-                :preserve
-                  sass -v
-              - if data.respond_to?(:version)
-                %p В ответ вы должны получить <code>Sass #{data.version.number} </code>.
-                Congratulations! You've successfully installed Sass.
-              - else
-                %p В ответ вы должны получить <code>Sass ???</code>. Congratulations!
-                You've successfully installed Sass.
-
-            %li
-              %p
-                <strong>Развлекайтесь.</strong> Если Вы новичок в Sass, то для Вас
-                мы подготовили много ресурсов, которые помогут быстро изучить Sass.
-
-              %p= link_to "Узнать больше о Sass", "/guide", :class => "button primary"
+        %pre
+          :preserve
+            brew install --devel sass/sass/sass

@@ -36,12 +36,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       который Вы сможете использовать на любом сайте.
 
       The most direct way to make this happen is in your terminal. Once Sass is
-      installed, you can run `sass input.scss output.css` from your terminal.
-      You can watch either individual files or entire directories. In addition,
-      you can watch folders or directories with the `--watch` flag. An example
-      of running Sass while watching an entire directory is the following:
-
-    ~ partial "code-snippets/homepage-sass-watch"
+      installed, you can compile your Sass to CSS using the `sass` command.
+      You'll need to tell Sass which file to build from, and where to output
+      CSS to. For example, running `sass input.scss output.css` from your
+      terminal would take a single Sass file, `input.scss`, and compile that
+      file to `output.css`.
 
     %hr/
 
@@ -196,6 +195,14 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       Это одна из самых полезных функций Sass. Используя директиву <code>@extend</code> можно наследовать наборы свойств
       CSS от одного селектора другому. Это позволяет держать ваш Sass-файл в «чистоте». В нашем примере мы покажем вам как
       сделать стили оповещений об ошибках, предупреждениях и удачных исходов.
+      This is one of the most useful features of Sass. Using
+      <code>@extend</code> lets you share a set of CSS properties from one
+      selector to another. It helps keep your Sass very DRY. In our example
+      we're going to create a simple series of messaging for errors, warnings
+      and successes using another feature which goes hand in hand with extend,
+      placeholder classes. A placeholder class is a special type of class
+      that only prints when it is extended, and can help keep your compiled
+      CSS neat and clean.
 
     %ul
       %li= link_to "SCSS", "#topic-7-SCSS"
@@ -213,6 +220,23 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       Вышеуказанный код позволяет взять свойства CSS из <code>.message</code> и применить их в <code>.success</code>, <code>.error</code>
       и <code>.warning</code>. Во время компиляции CSS-файла работает магия, которая поможет вам избежать написания лишних классов
       в HTML элементах. Результат выглядит вот так:
+      What the above code does is tells <code>.message</code>,
+      <code>.success</code>, <code>.error</code>, & <code>.warning</code>
+      to behave just like <code>%message-shared</code>. That means anywhere
+      that <code>%message-shared</code> shows up, <code>.message</code>,
+      <code>.success</code>, <code>.error</code>, & <code>.warning</code>
+      will too. The magic happens in the generated CSS, where each of these
+      classes will get the same CSS properties as <code>%message-shared</code>.
+      This helps you avoid having to write multiple class names on HTML
+      elements.
+
+      You can extend most simple CSS selectors in addition to placeholder
+      classes in Sass, but using placeholders is the easiest way to make
+      sure you aren't extending a class that's nested elsewhere in your
+      styles, which can result in unintended selectors in your CSS.
+
+      When you generate your CSS it will look like this. Note that the CSS
+      in <code>%equal-heights</code> doesn't print because it is never used.
 
     ~ partial "code-snippets/homepage-extend-css"
 
