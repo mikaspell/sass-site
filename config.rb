@@ -1,8 +1,7 @@
 require 'breakpoint'
 require 'middleman-syntax'
-require 'middleman-deploy'
+# require 'middleman-deploy'
 require 'susy'
-require 'haml'
 
 activate :automatic_image_sizes
 activate :autoprefixer do |config|
@@ -22,8 +21,6 @@ end
 set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
-
-Haml::TempleEngine.disable_option_validator!
 
 set :markdown_engine, :redcarpet
 set :css_dir,    'assets/css'
