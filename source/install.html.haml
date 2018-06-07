@@ -59,67 +59,67 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
         %span.mac-icon
 
   %li.command-line
-    %h3 Command Line
+    %h3 Командная строка
     %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Keyboard"
 
     :markdown
-      When you install Sass on the command line, you'll be able to run the
-      `sass` executable to compile `.sass` and `.scss` files to `.css` files.
-      For example:
+      Когда вы используете Sass через командную строку, то для того, чтобы
+      запустить компиляцию `.sass` и `.scss` в `.css` файлы введите команду
+      `sass`.
+      Например:
 
           sass source/stylesheets/index.scss build/stylesheets/index.css
 
-      First install Sass using one of the options below, then run
-      `sass --version` to be sure it installed correctly. If it did, this will
-      include `#{impl_version(:dart)}`. You can also run `sass --help` for more
-      information about the command-line interface.
+      Используя любой способ установки Sass, запустите команду `sass --version`
+      чтобы быть уверенным, что установка прошла успешно. Если эту команду выполнить,
+      то в ответ вы получите версию Sass `#{data.version.dartsass}`. Также вы можете
+      запустить команду `sass --help` для получения информации по использованию Sass
+      в командной строке.
 
-      Once it's all set up, <strong>go and play</strong>. If you're brand new to
-      Sass we've set up some resources to help you learn pretty darn quick.
+      Как только все настроено, <strong>начинайте наслаждаться</strong>. Если вы впервые
+      столкнулись с Sass? то специально для вас мы создали несколько ресурсов для обучения.
 
-    %p= link_to "Learn More About Sass", "/guide", :class => "button primary"
+    %p= link_to "Узнать больше о Sass", "/guide", :class => "button primary"
 
     %dl
-      %dt Install Anywhere (Standalone)
+      %dt Установка в любом месте (Standalone)
       %dd
-        You can install Sass on Windows, Mac, or Linux by downloading the
-        package for your operating system
-        #{link_to "from GitHub", release_url(:dart)} and
-        <a href="https://katiek2.github.io/path-doc/">adding it to your
-        <code>PATH</code></a>. That's all—there are no external dependencies and
-        nothing else you need to install.
+        Вы можете установить Sass в Windows, Mac, или Linux путем скачивания дистрибутива
+        для вашей операционной системы #{link_to "from GitHub", release_url(:dart)} и
+        <a href="https://katiek2.github.io/path-doc/">выполните действия с
+        <code>PATH</code></a>. Вот и все: никаких зависимостей нет и ничего
+        не нужно устанавливать дополнительно.
 
-      %dt Install Anywhere (npm)
+      %dt Установка в любом месте (npm)
       %dd
         %p
-          If you use Node.js, you can also install Sass using
-          <a href="https://www.npmjs.com/">npm</a> by running
+          Если вы используете Node.js, то вы можете установить Sass c помощью
+          <a href="https://www.npmjs.com/">npm</a>:
 
         %pre
           :preserve
             npm install -g sass
 
-        <strong>However, please note</strong> that this will install the pure
-        JavaScript implementation of Sass, which runs somewhat slower than the
-        other options listed here. But it has the same interface, so it'll be
-        easy to swap in another implementation later if you need a bit more
-        speed!
+        <strong>Однако учтите</strong>, что это установит реализацию Sass на нативном JavaScript,
+        которая работает несколько медленнее, чем другие реализации, перечисленные здесь.
+        Но он имеет тот же интерфейс, поэтому будет легче поменять на другую реализацию позже,
+        если вам потребуется немного больше скорости!
 
-      %dt Install on Windows (Chocolatey)
+      %dt Установка в Windows (Chocolatey)
       %dd
         %p
-          If you use <a href="https://chocolatey.org/">the Chocolatey package
-          manager</a> for Windows, you can install Dart Sass by running
+          Если вы используете <a href="https://chocolatey.org/">менеджер пакетов Chocolatey</a> для
+          Windows, вы можете установить Dart Sass при помощи команды:
 
         %pre
           :preserve
             choco install sass
 
-      %dt Install on Mac OS X (Homebrew)
+      %dt Установка в Mac OS X (Homebrew)
       %dd
         %p
-          If you use <a href="https://brew.sh/">the Homebrew package
-          manager</a> for Mac OS X, you can install Dart Sass by running
+          Если вы используете <a href="https://brew.sh/">менеджер пакетов Homebrew</a> для
+          Mac OS X, вы можете установить Dart Sass при помощи команды:
 
         %pre
           :preserve

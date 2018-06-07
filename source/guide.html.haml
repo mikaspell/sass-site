@@ -28,19 +28,19 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
     :markdown
       ## Препроцессинг
 
-      Написание CSS само по себе весело, но когда таблица стилей становится огромной, то становится и сложно её обслуживать.
-      И вот в таком случае нам поможет препроцессор. Sass позволяет использовать функции недоступные в самом CSS, например,
-      переменные, вложенности, миксины, наследование и другие приятные вещи, возвращающие удобство написания CSS.
+      Написание CSS само по себе весело, но когда таблица стилей становится огромной,
+      то становится и сложно её обслуживать. И вот в таком случае нам поможет препроцессор.
+      Sass позволяет использовать функции недоступные в самом CSS, например, переменные,
+      вложенности, миксины, наследование и другие приятные вещи, возвращающие удобство написания CSS.
 
-      Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass-файл и сохраняет его как простой CSS-файл,
-      который Вы сможете использовать на любом сайте.
+      Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass-файл и сохраняет
+      его как простой CSS-файл, который Вы сможете использовать на любом сайте.
 
-      The most direct way to make this happen is in your terminal. Once Sass is
-      installed, you can compile your Sass to CSS using the `sass` command.
-      You'll need to tell Sass which file to build from, and where to output
-      CSS to. For example, running `sass input.scss output.css` from your
-      terminal would take a single Sass file, `input.scss`, and compile that
-      file to `output.css`.
+      Самый простой способ получить такой результат - использовать терминал. После того, как Sass установлен,
+      вы можете компилировать ваш Sass в CSS, используя команду `sass`. Вам всего лишь нужно
+      сообщить Sass, где взять файл Sass и в какой файл CSS его скомпилировать. Например,
+      запустив команду `sass input.scss output.css` в терминале, вы сообщаете Sass взять один
+      Sass файл, `input.scss`, и скомпилировать в файл `output.css`.
 
     %hr/
 
@@ -194,15 +194,11 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
 
       Это одна из самых полезных функций Sass. Используя директиву <code>@extend</code> можно наследовать наборы свойств
       CSS от одного селектора другому. Это позволяет держать ваш Sass-файл в «чистоте». В нашем примере мы покажем вам как
-      сделать стили оповещений об ошибках, предупреждениях и удачных исходов.
-      This is one of the most useful features of Sass. Using
-      <code>@extend</code> lets you share a set of CSS properties from one
-      selector to another. It helps keep your Sass very DRY. In our example
-      we're going to create a simple series of messaging for errors, warnings
-      and successes using another feature which goes hand in hand with extend,
-      placeholder classes. A placeholder class is a special type of class
-      that only prints when it is extended, and can help keep your compiled
-      CSS neat and clean.
+      сделать стили оповещений об ошибках, предупреждениях и удачных исходах, используя другие возможности Sass,
+      которые идут рука-об-руку с расширением, классами-шаблонами.
+
+      Класс-шаблон - особый тип классов, который выводится только при использовании расширения - это позволит
+      сохранить ваш скомпилированный CSS чистым и аккуратным.
 
     %ul
       %li= link_to "SCSS", "#topic-7-SCSS"
@@ -217,26 +213,22 @@ meta_key: sass, scss, mixin, variables, nesting, partials, inheritance, operator
       ~ partial "code-snippets/homepage-extend-sass"
 
     :markdown
-      Вышеуказанный код позволяет взять свойства CSS из <code>.message</code> и применить их в <code>.success</code>, <code>.error</code>
-      и <code>.warning</code>. Во время компиляции CSS-файла работает магия, которая поможет вам избежать написания лишних классов
-      в HTML элементах. Результат выглядит вот так:
-      What the above code does is tells <code>.message</code>,
-      <code>.success</code>, <code>.error</code>, & <code>.warning</code>
-      to behave just like <code>%message-shared</code>. That means anywhere
-      that <code>%message-shared</code> shows up, <code>.message</code>,
-      <code>.success</code>, <code>.error</code>, & <code>.warning</code>
-      will too. The magic happens in the generated CSS, where each of these
-      classes will get the same CSS properties as <code>%message-shared</code>.
-      This helps you avoid having to write multiple class names on HTML
-      elements.
+      Вышеуказанный код сообщает классам <code>.message</code>,
+      <code>.success</code>, <code>.error</code> и <code>.warning</code>
+      вести себя как <code>%message-shared</code>. Это означает, что где бы не
+      вызывался <code>%message-shared</code>, то и <code>.message</code>,
+      <code>.success</code>, <code>.error</code> и <code>.warning</code> тоже
+      будут вызваны. Магия происходит в сгенерированном CSS, где каждый из этих классов
+      получает css-свойства, как и <code>%message-shared</code>. Это позволит вам
+      избежать написания множества классов в HTML элементах.
 
-      You can extend most simple CSS selectors in addition to placeholder
-      classes in Sass, but using placeholders is the easiest way to make
-      sure you aren't extending a class that's nested elsewhere in your
-      styles, which can result in unintended selectors in your CSS.
+      Вы можете расширить большинство простых CSS селекторов прибавление к классам-шаблонам
+      в Sass, однако, использование шаблонов - простейший способ быть уверенным, что
+      вы не расширяете класс везде, где он используется в ваших стилях, что могло бы привести
+      к непреднамеренным наборам стилей в вашем CSS.
 
-      When you generate your CSS it will look like this. Note that the CSS
-      in <code>%equal-heights</code> doesn't print because it is never used.
+      Когда вы генерируете ваш CSS, то он будет выглядеть как пример ниже. Обратите внимание,
+      <code>%equal-heights</code> не попадает в CSS, так как ни разу не был использован.
 
     ~ partial "code-snippets/homepage-extend-css"
 

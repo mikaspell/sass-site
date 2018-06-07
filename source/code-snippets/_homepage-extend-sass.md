@@ -1,10 +1,10 @@
 ```sass
-// This CSS won't print because %equal-heights is never extended.
+// Данный отрывок кода не попадет в CSS, так как %equal-heights никогда не расширялся.
 %equal-heights
   display: flex
   flex-wrap: wrap
 
-// This CSS will print because %message-shared is extended.
+// Данный отрывок кода попадет в CSS потому, что %message-shared расширен.
 %message-shared
   border: 1px solid #ccc
   padding: 10px
