@@ -18,6 +18,8 @@ compass_config do |config|
   config.output_style = :expanded
 end
 
+Haml::TempleEngine.disable_option_validator!
+
 set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
@@ -63,7 +65,7 @@ configure :build do
   activate :robots, :rules => [
     {:user_agent => '*', :allow => %w(/)}
   ],
-  :sitemap => 'http://sass-scss.ru/sitemap.xml'
+  :sitemap => 'https://sass-scss.ru/sitemap.xml'
 
   set :relative_links, true
 
