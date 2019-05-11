@@ -3,54 +3,56 @@ title: Dart Sass
 ---
 
 %p.introduction
-  Dart Sass is the primary implementation of Sass, which means it gets new
-  features before any other implementation. It's fast, easy to install, and it
-  compiles to pure JavaScript which makes it easy to integrate into modern web
-  development workflows. Find out more or help out with its development on
+  Dart Sass является основной реализацией Sass, а это значит, что данная
+  реализация получает новые возможности в первую очередь, в отличие от
+  других реализаций. Он быстр, легок в установке, а также он компилируется
+  в нативный JavaScript, что позволяет внедрить его в любые современные
+  процессы разработки. Узнайте больше или помогите с его разработкой на
   #{link_to "GitHub", "https://github.com/sass/dart-sass"}.
 
-%h2 There are two ways to use Dart Sass:
+%h2 Способы использования Dart Sass:
 
 %ol.list-columns
   %li
     :markdown
-      ### Command Line
+      ### Командная строка
 
-      Dart Sass's stand-alone command-line executable uses the blazing-fast Dart
-      VM to compile your stylesheets. To install Dart Sass on the command line,
-      check out the #{link_to "installation instructions", "install"}. Once
-      you've got it running, you can use it compile files:
+      Автономный Dart Sass в командной строке использует молниеносную Dart VM
+      для компиляции ваших стилей. Для установки Dart Sass в командной строке
+      перейдите на страницу #{link_to "Установка", "install"}.
+      После того, как установите Sass, вы сможете изпользовать его для компиляции
+      файлов:
 
           sass source/stylesheets/index.scss build/stylesheets/index.css
 
-      See `sass --help` for additional information on the command-line
-      interface.
+      Команда `sass --help` позволит вам узнать все доступные команды в интерфейсе
+      командной строки.
 
-      #### Dart Library
+      #### Библиотека Dart
 
-      You can also use Dart Sass as a Dart library to get the speed of the Dart
-      VM plus the ability to define your own functions and importers. To add it
-      to an existing project:
+      Вы можете использовать Dart Sass как библиотеку Dart, чтобы получить скорость
+      Dart VM и возможность создавать свои функции и импортеры. Добавьте его в
+      существующий проект:
 
     %ol
       %li
         :markdown
-          [Install the Dart SDK][install]. Make sure its `bin` directory is [on
-          your `PATH`][path].
+          [Установите Dart SDK][install]. Удостоверьтесь, что папка `bin` находится [в
+          переменной `PATH`][path].
 
           [install]: https://www.dartlang.org/install#automated-installation-and-updates
           [path]: https://katiek2.github.io/path-doc/
       %li
-        %p Create a <code>pubspec.yaml</code> file like this:
+        %p Создайте файл <code>pubspec.yaml</code>:
         :code
           # lang: yaml
           name: my-project
           dev_dependencies:
             sass: ^#{impl_version(:dart)}
       %li
-        %p Run <code>pub get</code>.
+        %p Запустите команду <code>pub get</code>.
       %li
-        %p Create a <code>compile-sass.dart</code> file like this:
+        %p Создайте файл <code>compile-sass.dart</code>:
         :code
           # lang: dart
           import 'dart:io';
@@ -61,11 +63,11 @@ title: Dart Sass
             new File(arguments[1]).writeAsStringSync(result);
           }
       %li
-        %p You can now use this to compile files:
+        %p Теперь вы можете использовать данный файл для компиляции:
         %pre dart compile-sass.dart styles.scss styles.css
       %li
         :markdown
-          Learn more about [writing Dart code][dart] (it's easy!) and about
+          Больше информации в статье [writing Dart code][dart] (это легко!) и в
           [Sass's Dart API][sass].
 
           [dart]: https://www.dartlang.org/guides/language/language-tour
