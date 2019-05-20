@@ -1,3 +1,5 @@
+---
 dartsass: 1.5.1
-libsass: 3.5.4
+libsass: 3.5.5
 rubysass: 3.5.6
+dart: 1.20.1

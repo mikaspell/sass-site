@@ -1,157 +1,68 @@
 ---
 title: "#teamSass"
+introduction: >
+  Sass имеет прекрасное сообщество дизайнеров и разработчиков, которые любят
+  высказываться и помогать людям. На данной страничке собрана небольшая коллекция ресурсов.
+  Стилизуйте на здоровье!
 meta_desc: Интересные и полезные статьи о sass, чем живет сообщество sass, как помочь развитию sass
 meta_key: sass, scss, codeschool, css-tricks, less, bower, book, compass, susy, foundation, bootstrap, sassdoc, sassmeister, somegrids, community, сообщество
 ---
 
-- content_for :introduction do
-  Sass имеет прекрасное сообщество дизайнеров и разработчиков, которые любят
-  высказываться и помогать людям. На данной страничке собрана небольшая коллекция ресурсов.
-  Стилизуйте на здоровье!
+:markdown
+  __Мы приветствуем всех в сообществе Sass, кроме тех, кто недоброжелателен
+  по отношению к членам сообщества__. Пожалуйста, прочитайте и следуйте
+  [принципам сообщества](/community-guidelines).
 
+  Думаете __сделать вклад__ в развитие Sass? Мы принимаем во внимание
+  любые факторы и идеи для того, чтобы оставаться постоянно стабильными.
+  Не бойтесь [вносить правки через пулреквесты](#Contribute) в репозиторий Sass.
 
+  Хотите создать свою реализацию Sass? Подробности на странице
+  [руководство по внедрению](/implementation).
 
-%ul.list-columns.anchors
-  %li
+%h2#Contribute Вклад в развитие
+
+:markdown
+
+  Sass — [проект с открытым исходным кодом][github] и мы призываем Вас внести свой вклад. Вы можете внести свою лепту
+  с помощью [сообщений об ошибках и пожеланий][issues], ну а если у Вас есть реальное решение,
+  которое может нам всем помочь, то Вы останетесь в наших сердцах навсегда. Если вы хотите нам помочь, но не знаете как,
+  то теги [Help Wanted][lang help] и [Dart Sass][dart help] в трекере ошибок помогут вам увидеть задачи, по которым
+  требуется помощь. Под этим тегом вы найдете множество запросов на добавление новых возможностей, багов и других задач,
+  которые не требуют интенсивной разработки, и по мнению разработчиков такие задачи - хорошее место для новых участников
+  разработки.
+
+  [github]: https://github.com/sass/sass
+  [issues]: https://github.com/sass/sass/issues
+  [lang help]: https://github.com/sass/sass/labels/Help%20Wanted
+  [dart help]: https://github.com/sass/dart-sass/labels/help%20wanted
+
+  [Dart Sass][] - эталонная реализация Sass и самая простая для изучения. Если вы не знаете Dart, не переживайте!
+  Здесь нет ничего сложного. Узнайте больше нового на странице с [информацией][]. Или, если вы заинтересованы
+  в добавлении новой функциональности в язык Sass, ознакомьтесь с [процедурами участия в разработке][].
+
+  [Dart Sass]: /dart-sass
+  [информацией]: https://github.com/sass/dart-sass/blob/master/CONTRIBUTING.md
+  [процедурами участия в разработке]: https://github.com/sass/language/blob/master/CONTRIBUTING.md
+
+- content_for :complementary do
+  %nav.sl-c-list-navigation-wrapper
     :markdown
-      __Мы приветствуем всех в сообществе Sass, кроме тех, кто недоброжелателен
-      по отношению к членам сообщества__. Пожалуйста, прочитайте и следуйте
-      [принципам сообщества](/community-guidelines).
+      ## Источники
 
-      Только __приступаете__? Есть несколько хороших [руководств](#Tutorials),
-      которые помогут «встать на ноги». Хотите __больше__? Есть несколько
-      хороших [блогов о Sass](#Blogs)(в том числе и [несколько статей](#Articles), которые мы
-      рекомендуем прочитать), и даже [несколько книг о Sass](#Books), которые
-      помогут Вам изучить много нового и полезного.
+      ### [Новости Sass](http://sass.news/)
+      Новости сообщества Sass от дизайнера Sass core team [Jina Anne](https://www.sushiandrobots.com)
 
-  %li
-    :markdown
-      Сообщество Sass невероятно. Существует ряд [фреймворков](#Frameworks),
-      которые делают использование Sass простым. Хотите попробовать Sass
-      на Node, Python или другом языке или фреймворке? Посетите
-      [оболочки libSass](/libsass).
+      ### [Погружение в Sass] (https://amzn.to/2LKF0uR)
+      от Hugo Giraudel и Miriam Suzanne
 
-      Думаете __сделать вклад__ в развитие Sass? Мы принимаем во внимание
-      любые факторы и идеи для того, чтобы оставаться постоянно стабильными.
-      Не бойтесь [вносить правки через пулреквесты](#Contribute) в репозиторий Sass.
+      ### [Прагматичное руководство к Sass 3: Приручите современный CSS](https://amzn.to/2LEwXiZ)
+      от Hampton Lintorn Catlin и Michael Lintorn Catlin
 
-      Хотите создать свою реализацию Sass? Подробности на странице
-      [руководство по внедрению](/implementation).
+      ### [Sass для веб-дизайнеров](https://amzn.to/2RkIVU3)
+      от Dan Cederholm
 
+      ### [Sass и Compass в действии](https://amzn.to/2RjAQz7)
+      от Wynn Netherland, Natalie Weizenbaum, Chris Eppstein, Brandon Mathis
 
-%hr/
-
-.content-primary
-  %h2#Articles Статьи о Sass
-  %ul.articles
-    - for article in data.community.articles
-      %li
-        %h3= link_to article.name, article.url
-        %p= article.description
-
-  %h2#Contribute Вклад в развитие
-
-  :markdown
-    Sass — [проект с открытым исходным кодом][github] и мы призываем Вас внести свой вклад. Вы можете внести свою лепту
-    с помощью [сообщений об ошибках и пожеланий][issues], ну а если у Вас есть реальное решение,
-    которое может нам всем помочь, то Вы останетесь в наших сердцах навсегда. Если вы хотите нам помочь, но не знаете как,
-    то тег [Help Wanted][help] в трекере ошибок поможет вам увидеть задачи, по которым требуется помощь. Под этим тегом
-    вы найдете множество запросов на добавление новых возможностей, багов и других задач, которые не требуют интенсивной
-    разработки, и по мнению разработчиков такие задачи - хорошее место для новых участников разработки.
-
-    [github]: https://github.com/sass/sass
-    [issues]: https://github.com/sass/sass/issues
-    [help]: https://github.com/sass/sass/labels/Help%20Wanted
-
-    Для написания кода мы используем две основные ветки. [Stable][github] - ветка по умолчанию, здесь мы ведем разработку
-    над уже выпещенной версией Sass. Правка багов в реализованой функциональности, обновление документации и общие глобальные
-    задачи - все это происходит в ветке stable. [Master][master] - ветка, где мы работаем над следуещей версией Sass. Все
-    новые возможности должны быть отправлены в ветку master.
-
-    [master]: https://github.com/sass/sass/tree/master
-    [planned]: https://github.com/sass/sass/labels/Planned
-
-    Кодовая база Sass очень большая, что может напугать при навигации по ней и усложнить понимание лучших путей развития.
-    Если вам нужна помощь, то вы можете создать новую запись в [системе приема обращений Sass][list] и разработчики Sass
-    будут рады помочь вам, даже если у вас небольшой опыт с Ruby или с программированием в общем. Они могут ответить на
-    вопросы о том, как работает система, предлагать вам пути решения проблем, а также проверить ваш код, если вы предлагаете
-    свое решение.
-
-    [list]: https://groups.google.com/forum/#!forum/sass-lang
-
-    Независимо от того, добавляете ли вы новую возможность или исправляете баг, если это меняет общедоступное поведение, то
-    очень важно для изменения создать автоматизированный тест. Все тесты находятся в папке `test/sass`; найдите наиболее
-    подходящий файл с тестами для ваших изменений и добавьте туда свой тест или тесты. Вы должны быть уверены, что тесты
-    покрыващие функциональности должны учитывать все варианты исхода событий в них и даже те, которые могут быть неверными.
-
-    После того, как вы написали патч с тестами, пришлите нам его через [pull request][]. Наш разработчик изучит его, при
-    необходимости задаст вопросы или предложит лучшие варианты. После всех утверждений ваш патч будет применен.
-
-    [pull request]: https://help.github.com/articles/creating-a-pull-request/
-
-  %h2#AddingSyntax Добавление синтаксиса
-
-  :markdown
-    Самые большие и наиболее впечатляющие возможности Sass обычно позволяют добавлять в себя новый синтаксис. Это может быть
-    очень круто: что-то что раньше при работе выдавало ошибку может начать работать правильно, потому что вы сделали это.
-    Однако, изменение синтаксиса это еще и большой объем работы. Для добавления нового синтаксиса на уровне `@`-правила
-    вам понадобится:
-
-    * Добавить ноду(узел) синтаксиса в дерево абстрактного синтаксиса в
-      [`lib/sass/tree`][tree].
-
-    * Парсить синтаксис SCSS в ноды(узлы). Парсер SCSS находится в
-      [`lib/sass/scss/parser.rb`][scss parser].
-
-    * Парсить синтаксис Sass в ноды(узлы). Парсер Sass находится в
-      [`lib/sass/engine.rb`][sass parser].
-
-    * Добавить поддержку настроек компиляции в ноду в
-      [`lib/sass/tree/visitors/set_options.rb`][set options].
-
-    * Добавить поддержку клонирования ноды в
-      [`lib/sass/tree/visitors/deep_copy.rb`][deep copy].
-
-    * Если синтаксис изменения это простой CSS, то добавить поддержку компиляции в CSS в [`lib/sass/tree/visitors/to_css.rb`][to css].
-      Если это изменение для Sass и оно не является частью CSS, то нужно описать поведение во время работы в
-      [`lib/sass/tree/visitors/perform.rb`][perform] или [`lib/sass/tree/visitors/cssize.rb`][cssize].
-
-    * Добавить поддержку обратной конвертации синтаксиса в SCSS и Sass для команды `sass-convert` в
-      [`lib/sass/tree/visitors/convert.rb`][convert].
-      Это тоже необходимо покрыть тестом!
-
-    [tree]: https://github.com/sass/sass/tree/stable/lib/sass/tree
-    [script tree]: https://github.com/sass/sass/tree/stable/lib/sass/script/tree
-    [scss parser]: https://github.com/sass/sass/tree/stable/lib/sass/scss/parser.rb
-    [sass parser]: https://github.com/sass/sass/tree/stable/lib/sass/engine.rb
-    [set options]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/set_options.rb
-    [deep copy]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/deep_copy.rb
-    [to css]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/to_css.rb
-    [perform]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/perform.rb
-    [cssize]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/cssize.rb
-    [convert]: https://github.com/sass/sass/tree/stable/lib/sass/tree/visitors/convert.rb
-
-
-.content-secondary
-  %h3#Tutorials Руководства
-  %ul
-    - for tutorial in data.community.tutorials
-      %li= link_to tutorial.name, tutorial.url
-
-  %h3#Blogs Блоги о Sass
-  %ul
-    - for blog in data.community.blogs
-      %li= link_to blog.name, blog.url
-
-  %h3#Books Книги о Sass
-  %ul
-    - for book in data.community.books
-      %li= link_to book.name, book.url
-
-  %h3#Projects Проекты и фреймворки
-  %ul
-    - for project in data.community.projects
-      %li
-        = link_to project.name, project.url
-        &mdash;
-        = project.description
+      ### [Путь Sass](http://thesassway.com/)

@@ -1,39 +1,124 @@
 !!!5
-%html.no-js(lang="en"){:class => data.page.head_classes}
+%html.no-js(lang='ru'){class: data.page.head_classes}
   %head
-    %meta(charset="utf-8")/
-    %meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+    %meta(charset='utf-8')
+    %meta(http-equiv='X-UA-Compatible' content='IE=edge')
     %title= page_title
-    = partial "layouts/head/meta"
-    = partial "layouts/head/link"
-    = partial "layouts/head/css"
-    = partial "layouts/head/js"
+    %meta(name='description' content='Syntatically Awesome Style Sheets')
+    %meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600|Source+Serif+Pro&display=swap&subset=cyrillic'
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic"
+    = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css'
+    = stylesheet_link_tag 'sass'
+    = yield_content :css
+    %noscript= stylesheet_link_tag 'noscript'
+
+    = yield_content :js_head
 
   %body{class: page_classes}
-    .page
-      = partial "layouts/roles/alert"
-      .pop-stripe
-      = partial "layouts/regions/banner"
-      = partial "layouts/regions/page_header"
+    /[if lt IE 9]
+      %p.browserupgrade
+        You are using an
+        %strong outdated
+        browser. Please
+        = link_to 'upgrade your browser', 'https://browsehappy.com/'
+        to improve your experience and security.
 
-      .body
-        .container
-          .content
-            - if content_for?(:introduction)
-              %p.introduction= yield_content :introduction
-            %main.main(role="main")=yield
+    %header.sl-r-banner(itemtype='http://schema.org/WPHeader' itemscope='itemscope' role='banner')
+      .sl-l-container
+        .sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--center.sl-l-large-grid--gutters
+          %p.sl-l-grid__column.sl-r-banner__brand
+            = link_to '/' do
+              = image_tag 'logos/logo.svg', alt: 'Sass', height: '48'
 
-        - if content_for?(:section_middle)
-          %section.section-middle
-            .container= yield_content :section_middle
+          %nav.sl-r-banner__navigation.sl-l-grid__column.sl-l-large-grid.sl-l-large-grid__column--auto-size.sl-c-list-horizontal-wrapper(itemtype='http://schema.org/SiteNavigationElement' itemscope='itemscope' role='navigation')
+            :markdown
+              - [Установка](/install)
+              - [Основы Sass](/guide)
+              - [Документация](/documentation)
+              - [Сообщество](/community)
 
-      = partial "layouts/regions/release"
+    %main.content(itemprop='mainContentOfPage' role='main')
+      %h1.sl-l-container
+        - if current_page.data.h1?
+          = Typogruby.improve(current_page.data.h1)
 
-      - if content_for?(:section_bottom)
-        %section.rek(style="padding-top: 1.5em" )
-          #yandex_rtb_R-A-227839-1
-        %section.section-bottom
-          .container= yield_content :section_bottom
+        - elsif current_page.data.title
+          = Typogruby.improve(current_page.data.title)
 
-    = partial "layouts/regions/contentinfo"
-    = partial "layouts/foot/js"
+
+      - section_class = ''
+
+      - unless current_page.data.h1 == 'CSS with superpowers'
+        - section_class = 'sl-l-section'
+
+      .sl-l-container.sl-background--white{class: section_class}= yield
+
+    .sl-c-alert
+      .sl-l-container.sl-c-list-horizontal-wrapper
+        %ul.sl-l-grid--justify-center
+          %li
+            Текущие версии:
+
+          %li
+            %span.release-name<
+              = link_to 'Dart Sass', '/dart-sass'
+              -# Force space between the two links.
+              &#32;
+              = link_to impl_version(:dart) || '???', release_url(:dart)
+
+          %li
+            %span.release-name<
+              = link_to 'LibSass', '/libsass'
+              -# Force space between the two links.
+              &#32;
+              = link_to impl_version(:libsass) || '???', release_url(:libsass)
+
+          %li
+            %span.release-name<
+              = link_to 'Ruby Sass', '/ruby-sass'
+              -# Force space between the link and the coffin.
+              &#32; ⚰
+
+          -#%li.sl-l-grid__column.sl-l-large-grid__column--auto-size
+          -#  = link_to 'Implementation Guide', '/implementation'
+
+    - if content_for?(:section_bottom)
+      %section.rek(style="padding-top: 1.5em" )
+        #yandex_rtb_R-A-227839-1
+      %section.sl-background--white.sl-l-container= Typogruby.improve(yield_content :section_bottom)
+
+    %footer.site-footer.contentinfo(itemtype='http://schema.org/WPFooter' itemscope='itemscope' role='contentinfo')
+      .sl-l-container.sl-l-section
+        .sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--center.sl-l-large-grid--gutters
+          .sl-l-grid__column
+            :markdown
+              Sass &copy; 2006&ndash;2018
+              [Hampton Catlin][hampton],
+              [Natalie Weizenbaum][natalie], [Chris Eppstein][chris],
+              [Jina Anne][jina], и многочисленные участники. Доступно для использования
+              и изменения по [лицензии&nbsp;MIT][license].
+
+              [hampton]: https://github.com/hcatlin
+              [natalie]: https://twitter.com/nex3
+              [chris]:   http://chriseppstein.github.io/
+              [jina]:    https://www.sushiandrobots.com
+              [license]: http://sass-lang.com/docs/yardoc/file.MIT-LICENSE.html
+
+            %nav.sl-c-list-horizontal-wrapper
+              :markdown
+                - [Репозиторий Sass](https://github.com/sass)
+                - [Репозиторий сайта](https://github.com/mikaspell/sass-site-rus)
+                - [Руководство по стилю](/styleguide)
+                - [Принципы сообщества](/community-guidelines)
+
+          .sl-l-grid__column.sl-l-large-grid__column--auto-size.sl-l-large-grid--justify-right
+            %a.twitter-follow-button(href='https://twitter.com/SassCSS' data-show-count='false' data-size='large')
+              Follow @SassCSS
+
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    = javascript_include_tag 'sass'
+    = yield_content :js_foot

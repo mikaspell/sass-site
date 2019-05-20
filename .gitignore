@@ -12,7 +12,6 @@ bundle
 .ruby-version
 /.dart-sass
 /.libsass
-/.ruby-sass
 /.sass-cache
 *.scssc
 /source/assets/css/vendor
@@ -22,3 +21,4 @@ bundle
 Thumbs.db
 .Trashes
 /.yardoc
+/vendor/bundle/

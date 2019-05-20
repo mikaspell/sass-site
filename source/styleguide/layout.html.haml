@@ -1,23 +1,10 @@
 ---
 title: Слои и сетка
+introduction: >
+  Мы используем сетку flex-box.
 ---
 
-%h2 Волшебная сетка Susy
-%p.introduction
-  Читайте
-  = link_to "документацию Susy", "http://susy.oddbird.net/demos/grid-types/#demo-magic"
-  для получения подробной информации.
-
 %h2 Другие инструменты и ресурсы
-%ul.list-feature
-  %li
-    %strong= link_to "Тест на отзывчивость", "/styleguide/responsive-test"
-  %li= link_to "Breakpoint", "http://breakpoint-sass.com/"
-  %li= link_to "The EMs have it: Proportional Media Queries FTW!", "http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/"
 
-%h2 Резолюции
-- data.layout.resolutions.each do |resolution|
-  %dl.guide-description-list
-    %dt
-      %code= "$" + resolution.target
-    %dd= resolution.width
+%ul.list-feature
+  %li= link_to 'The EMs have it: Proportional Media Queries FTW!', 'http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/'

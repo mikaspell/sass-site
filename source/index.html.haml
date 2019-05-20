@@ -1,62 +1,64 @@
 ---
 title: Документация на русском языке
+h1: CSS с суперсилой
+no_container: true
 meta_desc: Sass - документация на русском языке. Что такое sass или scss?
 meta_key: sass, scss, css, css3, html, ruby
-h1: CSS с суперсилой
 ---
 
 
-.hero-lockup
-  %p.hero-image= image_tag "illustrations/glasses.svg", height: "160", alt: "Очки"
-  %p.introduction
-    Sass является наиболее развитым и стабильным расширением CSS профессионального уровня.
+.sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--center.sl-l-large-grid--gutters-large
+  .sl-l-grid__column
+    %p.sl-c-introduction
+      Sass является наиболее развитым и стабильным расширением CSS профессионального уровня.
+
+  %p.sl-l-grid__column
+    = image_tag 'illustrations/glasses.svg', height: '160', alt: 'Glasses'
 
 - content_for :section_bottom do
-  %ul.list-tiled
-    %li
-      %h3 Совместимость с CSS
-      %p
+  %ul.sl-l-grid.sl-l-grid--full.sl-l-medium-grid--gutters-large.sl-l-medium-grid--divide-by-2.sl-l-large-grid--divide-by-3.sl-l-section
+    %li.sl-l-grid__column
+      :markdown
+        ### Совместимость с CSS
+
         Sass полностью совместим со всеми версиями CSS. Мы уделяем серьезное
         внимание совместимости, поэтому вы можете легко использовать любые
         доступные библиотеки CSS.
-    %li
-      %h3 Разнообразие функций
-      %p
+
+    %li.sl-l-grid__column
+      :markdown
+        ### Разнообразие возможностей
+
         Sass может похвастаться большим количеством возможностей, чем любой
         другой язык расширения CSS. Команда Sass Core бесконечно работает
         не только для поддержания этих возможностей, но и для того, чтобы быть
         впереди.
-    %li
+
+    %li.sl-l-grid__column
       %h3 Опыт
+
       %p
-        Sass находится в активной разработке командой Sass Core более 9 лет и все это время
+        Sass находится в активной разработке командой Sass Core более 12 лет и все это время
         команда относится к этому процессу с любовью.
-    %li
-      %h3 Поддержка индустрией
-      %p
+
+    %li.sl-l-grid__column
+      :markdown
+        ### Поддержка индустрией
+
         Снова и снова сообщество разработчиков выбирает Sass как главное средство
         написания CSS.
-    %li
-      %h3 Большое сообщество
-      %p
+
+    %li.sl-l-grid__column
+      :markdown
+        ### Большое сообщество
+
         Sass активно поддерживается и разрабатывается консорциумом
         высокотехнологичных компаний и нескольких сотен разработчиков.
-    %li
-      %h3 Фреймворки
-      %p
-        Есть бесконечное количество фреймворков, построенных на Sass.
-        = succeed "," do
-          = link_to "Compass", "http://compass-style.org/"
-        = succeed " и" do
-          = link_to "Bourbon", "http://bourbon.io/"
-        = succeed " -" do
-          = link_to "Susy", "http://susy.oddbird.net/"
-        это только несколько примеров из огромного количества проектов.
 
-- content_for :complementary do
-  .get-started
-    %h3 Начать легко
-    %ol
-      %li= link_to "Установка", "install"
-      %li= link_to "Основы SASS", "guide"
-      %li= link_to "Присоединяйся", "community"
+    %li.sl-l-grid__column
+      :markdown
+        ### Frameworks
+
+        Есть бесконечное количество фреймворков, построенных на Sass.
+        [Compass](http://compass-style.org/), [Bourbon](http://bourbon.io/), и
+        [Susy](http://susy.oddbird.net/) - это только несколько примеров из огромного количества проектов.

@@ -1,0 +1,14 @@
+= wrap_layout :has_navigation do
+  = yield
+
+  - content_for :navigation do
+    %nav.sl-c-list-navigation-wrapper
+      :markdown
+        ### [Руководство по стилю](/styleguide)
+
+        - [Бренд](/styleguide/brand)
+        - [Цвета](/styleguide/color)
+        - [Типографика](/styleguide/typography)
+        - [Слои](/styleguide/layout)
+        - [Компоненты](/styleguide/components)
+        - [Код](/styleguide/code)

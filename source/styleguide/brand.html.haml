@@ -1,69 +1,63 @@
 ---
-title: Брендирование
+title: Руководство по бренду
 ---
 
-%h2 Использование бренда
+:markdown
+  ## Использование бренда
 
-%ul
-  %li
-    Не растягивайте и деформируйте логотип. Используйте версию «для печати» когда
+  - Не растягивайте и не деформируйте логотип. Используйте версию «для печати» когда
     вам необходим логотип в квадратном виде (как аватар).
-
-  %li
-    Не изменяйте цвет логотипа. Официальный цвет — `$hopbush`
-    (`#c69`).
-
-  %li
-    Если вы используете логотип на цветном фоне или фоне с большим количеством
+  - Не изменяйте цвет логотипа. Официальный цвет логотипа - `$sl-color--hopbush` (`#c69`).
+  - Если вы используете логотип на цветном фоне или фоне с большим количеством
     элементов, то вы можете использовать реверсированный логотип (на белом фоне),
     который представлен ниже.
+  - Когда используете бренд Sass или другие элементы Sass в вашей презентации,
+    статье, видео и в других вариантах, пожалуйста, будьте уважительны. Бренд
+    Sass женственный и за это мы его любим, но наш бренд никогда не должен быть
+    использован в сексистких образах. На самом деле мы [сильно изменили наш логотип](https://github.com/sass/sass/issues/349)
+    в связи с этим. Больше подробностей вы найдете на странице [руководство сообшества](/community-guidelines).
+    Если у Вас есть вопросы по поводу изображений, которые Вы
+    хотите использовать, не стесняйтесь обращаться к нам по адресу:
 
-  %li
-    %p
-      Когда используете бренд Sass или другие элементы Sass в вашей презентации,
-      статье, видео и в других вариантах, пожалуйста, будьте уважительны. Бренд
-      Sass женственный и за это мы его любим, но наш бренд никогда не должен быть
-      использован в сексистких образах. На самом деле мы <a href="https://github.com/sass/sass/issues/349">сильно изменили наш логотип</a>
-      в связи с этим. Если у Вас есть вопросы по поводу изображений, которые Вы
-      хотите использовать, не стесняйтесь обращаться к нам по адресу:
-      = succeed "." do
-        :javascript
-          //<![CDATA[
-            <!--
-              var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-              "=92){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-              ".substr(0,ol);}f(\")65,\\\"#'-<6-s>,ban\\\"\\\\ldhd*uvepBxt720\\\\320\\\\t\\"+
-              "\\620\\\\720\\\\620\\\\330\\\\IT)700\\\\100\\\\720\\\\520\\\\120\\\\n\\\\20" +
-              "0\\\\M520\\\\730\\\\300\\\\700\\\\530\\\\n\\\\310\\\\n\\\\700\\\\C120\\\\22" +
-              "0\\\\100\\\\410\\\\~84/z516;020\\\\v710\\\\o4<;'9li620\\\\&$+#r\\\\d630\\\\" +
-              ";5)QKPQTy130\\\\KDWfo610\\\\FRUELX_420\\\\GF410\\\\@n\\\\200\\\\n\\\\600\\\\"+
-              "D330\\\\420\\\\700\\\\620\\\\$230\\\\620\\\\010\\\\610\\\\*3038`6,;?49q610\\"+
-              "\\l6*<%l*vk`)* 0*06nKPXQNYV\\\\\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x" +
-              "(edoCrahCmorf.gnirtS=+o;721=%y;i=+y)65==i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\" +
-              "\"\\\"=o,i rav{)y,x(f noitcnuf\")"                                           ;
-              while(x=eval(x));
-            //-->
-          //]]>
-      Читайте наши
-      = link_to "принципы сообщества", "/community-guidelines"
-      для получения дополнительной информации.
+= succeed "." do
+  :javascript
+    //<![CDATA[
+      <!--
+        var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+        "=92){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+        ".substr(0,ol);}f(\")65,\\\"#'-<6-s>,ban\\\"\\\\ldhd*uvepBxt720\\\\320\\\\t\\"+
+        "\\620\\\\720\\\\620\\\\330\\\\IT)700\\\\100\\\\720\\\\520\\\\120\\\\n\\\\20" +
+        "0\\\\M520\\\\730\\\\300\\\\700\\\\530\\\\n\\\\310\\\\n\\\\700\\\\C120\\\\22" +
+        "0\\\\100\\\\410\\\\~84/z516;020\\\\v710\\\\o4<;'9li620\\\\&$+#r\\\\d630\\\\" +
+        ";5)QKPQTy130\\\\KDWfo610\\\\FRUELX_420\\\\GF410\\\\@n\\\\200\\\\n\\\\600\\\\"+
+        "D330\\\\420\\\\700\\\\620\\\\$230\\\\620\\\\010\\\\610\\\\*3038`6,;?49q610\\"+
+        "\\l6*<%l*vk`)* 0*06nKPXQNYV\\\\\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x" +
+        "(edoCrahCmorf.gnirtS=+o;721=%y;i=+y)65==i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\" +
+        "\"\\\"=o,i rav{)y,x(f noitcnuf\")"                                           ;
+        while(x=eval(x));
+      //-->
+    //]]>
 
-%p= link_to "Скачать логотип в векторе", "/assets/img/styleguide/sass-logo.zip", class: "button primary"
+%p= link_to "Скачать логотип в векторе", "/assets/img/styleguide/sass-logo.zip", class: "sl-c-button sl-c-button--primary"
 %p= partial "/styleguide/brand_license"
 
-.logos
-  %h3 Стандартный
-  %ul.list-columns
-    %li= image_tag "styleguide/color.png", height: "80", alt: "Sass"
-    %li= image_tag "styleguide/seal-color.png", height: "80", alt: "Sass"
 
-  %h3 Светлый
-  %ul.list-tiled.swatch-color-background-shade
-    %li= image_tag "styleguide/white.png", height: "80", alt: "Sass"
-    %li= image_tag "styleguide/seal-color-reversed.png", height: "80", alt: "Sass"
-    %li= image_tag "styleguide/seal-black-reversed.png", height: "80", alt: "Sass"
 
-  %h3 Темный
-  %ul.list-columns
-    %li= image_tag "styleguide/black.png", height: "80", alt: "Sass"
-    %li= image_tag "styleguide/seal-black.png", height: "80", alt: "Sass"
+%h3 Стандартный
+
+%ul.sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--gutters-large.sl-l-large-grid--center
+  %li.sl-l-grid__column= image_tag "styleguide/color.png", height: "80", alt: "Sass"
+  %li.sl-l-grid__column= image_tag "styleguide/seal-color.png", height: "80", alt: "Sass"
+
+%h3 Белый
+
+%ul.sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--gutters-large.sl-l-large-grid--center.sl-background--midnight-blue
+  %li.sl-l-grid__column= image_tag "styleguide/white.png", height: "80", alt: "Sass"
+  %li.sl-l-grid__column= image_tag "styleguide/seal-color-reversed.png", height: "80", alt: "Sass"
+  %li.sl-l-grid__column= image_tag "styleguide/seal-black-reversed.png", height: "80", alt: "Sass"
+
+%h3 Чёрный
+
+%ul.sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--gutters-large.sl-l-large-grid--center
+  %li.sl-l-grid__column= image_tag "styleguide/black.png", height: "80", alt: "Sass"
+  %li.sl-l-grid__column= image_tag "styleguide/seal-black.png", height: "80", alt: "Sass"

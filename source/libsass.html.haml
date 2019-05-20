@@ -1,16 +1,13 @@
 ---
-title: libSass
-meta_desc: Список проектов, портирующих sass на разные языки программирования
-meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby, scala, libsass
----
-
-%p.introduction
+title: LibSass
+introduction: >
   Мы хотим, чтобы каждый получал удовольствие от работы с Sass, независимо от
   используемого им языка. Первоначально Sass был написан на Ruby. LibSass это порт ядра Sass, написанный на C/C++.
   Его цель — быть простым, быстрым и легко внедряемым.
-  Узнайте больше об этом проекте на
-  = succeed "." do
-    = link_to "GitHub", "http://github.com/sass/libsass"
+  Узнайте больше об этом проекте на [GitHub](http://github.com/sass/libsass).
+meta_desc: Список проектов, портирующих sass на разные языки программирования
+meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby, scala, libsass
+---
 
 :markdown
   ## Оболочки
@@ -33,42 +30,47 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
       локальную копию исходников LibSass, либо он должен быть установлен в вашей системе. Для разработки, пожалуйста,
       используйте исходники. Далее вам нужно настроить переменную среды так, чтобы она указывала в директорию LibSass, например:
 
-    ~ partial "code-snippets/libsass-setup"
+    = partial 'code-snippets/libsass-setup'
 
-    %p
+    :markdown
       Исполняемый файл будет находиться в директории bin. Для его запуска используйте команду, подобную этой:
 
-    ~ partial "code-snippets/libsass-execute"
+    = partial 'code-snippets/libsass-execute'
 
   %li#crystal
     :markdown
       ### Crystal
-      [sass.cr](https://github.com/straight-shoota/sass.cr)
-      is a LibSass wrapper for the
-      [Crystal programming language](https://crystal-lang.org/).
+
+      [sass.cr](https://github.com/straight-shoota/sass.cr) is a LibSass wrapper
+      for the [Crystal programming language](https://crystal-lang.org/).
 
   %li#go
     :markdown
       ### Go
-      [Wellington](https://github.com/wellington/wellington) - раcширение к libSass, добавляющее возможность создания
-      спрайтов. Доступно через пакетный менеджер brew:
 
-      `brew install wellington`
+      [go-libsass](https://github.com/wellington/go-libsass) has the most active
+      GoLang wrapper. [gosass](https://github.com/moovweb/gosass) is another
+      LibSass wrapper.
 
-      Также существуют три других проекта на языке go:
-      [gosass](https://github.com/moovweb/gosass),
-      [go-sass](https://github.com/SamWhited/go-sass) и
-      [go_sass](https://github.com/suapapa/go_sass), которые некоторое время не обновлялись.
+      [Wellington](http://getwt.io/) - раcширение к libSass, добавляющее возможность создания
+      спрайтов. Доступно через пакетный менеджер brew: `brew install wellington`
+
+      [C6](https://github.com/c9s/c6) is a Sass 3.2 compatible implementation
+      written in pure GoLang that aims to extend Sass.
+      [wellington/sass](https://github.com/wellington/sass) is an in-progress
+      pure Go Sass lexer, parser, and compiler.
 
   %li#java
     :markdown
       ### Java
+
       [jsass](https://github.com/bit3/jsass) - оболочка, написанная на Java.
       Плагин для Maven: [libSass Maven plugin](https://github.com/warmuuh/libsass-maven-plugin).
 
   %li#javascript
     :markdown
       ### JavaScript
+
       The [sass.js](https://github.com/medialize/sass.js) project makes
       LibSass available as pure JavaScript. There's a way to [test it in the
       browser](http://medialize.github.io/playground.sass.js/), too.
@@ -76,17 +78,20 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
   %li#lua
     :markdown
       ### Lua
+
       Оболочка для lua находится на сайте [lua-sass](https://github.com/craigbarnes/lua-sass).
 
   %li#net
     :markdown
       ### .NET
+
       [libsass-net](https://github.com/darrenkopp/libsass-net) регулярно обновляется, вероятно являясь наилучшим вариантом.
       Также существует [NSass](https://github.com/TBAPI-0KA/NSass), хотя он некоторое время не обновлялся.
 
   %li#node
     :markdown
       ### Node
+
       Проект [node-sass](https://github.com/sass/node-sass) доказал свою популярность, и мы взяли его в основной репозиторий
       Sass на GitHub. Проверить обновления можно на странице пакета [здесь](https://www.npmjs.org/package/node-sass), и
       [на отведённом для него Твиттер-аккаунте](https://twitter.com/nodesass).
@@ -94,70 +99,79 @@ meta_key: sass, scss. python, node, php, javascript, java, go, .net, perl, ruby,
   %li#perl
     :markdown
       ### Perl
+
       Проект [CSS::Sass](https://github.com/sass/perl-libsass) обновляется регулярно. Также существует проект
       [Text-Sass-XS](https://github.com/ysasaki/Text-Sass-XS), который некоторое время не обновлялся.
 
   %li#php
     :markdown
       ### PHP
-      Проект [SassPHP](https://github.com/sensational/sassphp) — обновлённый форк [более старой PHP версии](https://github.com/jamierumbelow/sassphp).
+
+      Проект [SassPHP](https://github.com/sensational/sassphp) — обновлённый форк [более старой PHP
+      версии](https://github.com/jamierumbelow/sassphp).
 
   %li#python
     :markdown
       ### Python
-      There are two Python projects that are updated regularly. The
-      [libsass-python](https://github.com/dahlia/libsass-python) project (there
-      are more details on
-      [its own website](http://hongminhee.org/libsass-python/)) and the
-      [python-scss](https://github.com/pistolero/python-scss) project.
+      The [libsass-python](https://github.com/sass/libsass-python) project
+      is updated regularly. There are more details on
+      [its own website](https://sass.github.io/libsass-python/).
 
-      Два других проекта для Python, [pylibsass](https://github.com/rsenk330/pylibsass) и [SassPython](https://github.com/marianoguerra/SassPython),
+      Три других проекта для Python,
+      [python-scss](https://github.com/pistolero/python-scss),
+      [pylibsass](https://github.com/rsenk330/pylibsass) и
+      [SassPython](https://github.com/marianoguerra/SassPython),
       некоторое время не обновлялись.
 
   %li#ruby
     :markdown
       ### Ruby
+
       libSass также был обратно портирован на Ruby в проекте [sassc-ruby](https://github.com/sass/sassc-ruby).
 
   %li#rust
     :markdown
       ### Rust
-      The [`sass_rs`](https://github.com/compass-rs/sass-rs) crate is a
-      LibSass wrapper and is updated regularly.
+
+      The [`sass_rs`](https://github.com/compass-rs/sass-rs) crate is a LibSass
+      wrapper and is updated regularly.
 
   %li#scala
     :markdown
       ### Scala
+
       Единственный проект для Scala, [Sass-Scala](https://github.com/kkung/Sass-Scala), не обновлялся последние пару лет.
 
 %h2 О проекте libSass
 
 :markdown
-  Идея проекта принадлежит Хамптону Катлину ([Hampton Catlin](http://twitter.com/hcatlin)),
-  первоначальному разработчику Sass, и спонсируется компанией [Moovweb](http://moovweb.com/).
-  Аарон Люн ([Aaron Leung](http://github.com/akhleung)) из Moovweb является главным разработчиком.
+  Идея проекта принадлежит Хамптону Катлину ([Hampton Catlin](http://twitter.com/hcatlin)), первоначальному разработчику
+  Sass, и спонсируется компанией [Moovweb](http://moovweb.com/). Аарон Люн ([Aaron Leung](http://github.com/akhleung))
+  из Moovweb является главным разработчиком.
 
 %figure
-  = image_tag "logos/libsass.png", alt: "логотип libSass"
+  = image_tag 'logos/libsass.png', alt: 'логотип libSass'
+
+- content_for :navigation do
+  %h3 Wrappers
+
+  .sl-c-list-navigation-wrapper
+    :markdown
+      - [SassC](#sassc)
+      - [Crystal](#crystal)
+      - [Go](#go)
+      - [Java](#java)
+      - [JavaScript](#javascript)
+      - [Lua](#lua)
+      - [.NET](#net)
+      - [Node](#node)
+      - [Perl](#perl)
+      - [PHP](#php)
+      - [Python](#python)
+      - [Ruby](#ruby)
+      - [Scala](#scala)
 
 - content_for :complementary do
-  %h3 Оболочки
-  %ul.anchors
-    %li= link_to "SassC",      "#sassc"
-    %li= link_to "Crystal",    "#crystal"
-    %li= link_to "Go",         "#go"
-    %li= link_to "Java",       "#java"
-    %li= link_to "JavaScript", "#javascript"
-    %li= link_to "Lua",        "#lua"
-    %li= link_to ".NET",       "#net"
-    %li= link_to "Node",       "#node"
-    %li= link_to "Perl",       "#perl"
-    %li= link_to "PHP",        "#php"
-    %li= link_to "Python",     "#python"
-    %li= link_to "Ruby",       "#ruby"
-    %li= link_to "Scala",      "#scala"
-
-
   %h3 Источники
 
   %ul

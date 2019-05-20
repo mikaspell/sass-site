@@ -1,68 +1,78 @@
 ---
 title: Установка Sass
+no_container: true
 meta_desc: Описание как установить sass и с помощью каких инструментов его можно использовать
 meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveReload, mixture, prepros, scout, terminal, командная строка, ruby, windows, linux, mac
 ---
 
-%h2 Существует несколько способов начать использовать Sass:
-%ol.list-columns
-  %li.gui-application
-    %h3 Приложения
-    %p= image_tag "illustrations/mouse.svg", class: "header-image", height: "160", alt: "Мышь"
-    %p
+.sl-l-grid.sl-l-grid--full.sl-l-large-grid--fit.sl-l-large-grid--gutters-large
+  .sl-l-grid__column
+    :markdown
+      ## Приложения
+
+      ![Mouse](illustrations/mouse.svg)
+
       Есть множество приложений под Windows, Mac и Linux, которые помогут в освоении и работе с
       Sass. Большинство из них бесплатные, но некоторые из них все-таки платные
       <small>(но это того стоит)</small>.
 
-    %ul.list-feature
+    %ul
       %li
-        = link_to "CodeKit", "http://incident57.com/codekit/"
-        %span.info (Платно)
-        %span.mac-icon
-      %li
-        = link_to "Compass.app", "http://compass.kkbox.com/"
-        %span.info (Условно-бесплатно)
-        %span.mac-icon
-        %span.windows-icon
-        %span.linux-icon
-      %li
-        = link_to "Ghostlab", "http://www.vanamco.com/ghostlab/"
-        %span.info (Платно)
-        %span.mac-icon
-        %span.windows-icon
-      %li
-        = link_to "Hammer", "http://hammerformac.com/"
-        %span.info (Платно)
-        %span.mac-icon
-      %li
-        = link_to "Koala", "http://koala-app.com/"
-        %span.info (Бесплатно)
-        %span.mac-icon
-        %span.windows-icon
-        %span.linux-icon
-      %li
-        = link_to "LiveReload", "http://livereload.com/"
-        %span.info (Условно-бесплатно)
-        %span.mac-icon
-        %span.windows-icon
-      %li
-        = link_to "Prepros", "https://prepros.io/"
-        %span.info (Платно)
-        %span.mac-icon
-        %span.windows-icon
-        %span.linux-icon
-      %li
-        = link_to "Scout-App", "http://scout-app.io/"
-        %span.info (Бесплатно)
-        %span.windows-icon
-        %span.linux-icon
-        %span.mac-icon
+        = link_to "CodeKit", "https://incident57.com/codekit/"
+        (Платно)
+        Mac
 
-  %li.command-line
-    %h3 Командная строка
-    %p= image_tag "illustrations/keyboard.svg", class: "header-image", height: "160", alt: "Keyboard"
+      %li
+        = link_to 'Compass.app', 'http://compass.kkbox.com/'
+        (Условно-бесплатно)
+        Mac
+        Windows
+        Linux
 
+      %li
+        = link_to 'Ghostlab', 'http://www.vanamco.com/ghostlab/'
+        (Платно)
+        Mac
+        Windows
+
+      %li
+        = link_to 'Hammer', 'http://hammerformac.com/'
+        (Платно)
+        Mac
+
+      %li
+        = link_to 'Koala', 'http://koala-app.com/'
+        (Бесплатно)
+        Mac
+        Windows
+        Linux
+
+      %li
+        = link_to 'LiveReload', 'http://livereload.com/'
+        (Условно-бесплатно)
+        Mac
+        Windows
+
+      %li
+        = link_to 'Prepros', 'https://prepros.io/'
+        (Платно)
+        Mac
+        Windows
+        Linux
+
+      %li
+        = link_to 'Scout-App', 'http://scout-app.io/'
+        (Бесплатно)
+        Windows
+        Linux
+        Mac
+
+  .sl-l-grid__column
     :markdown
+      ## Командная строка
+
+      ![Keyboard](illustrations/keyboard.svg)
+
       Когда вы используете Sass через командную строку, то для того, чтобы
       запустить компиляцию `.sass` и `.scss` в `.css` файлы введите команду
       `sass`.
@@ -79,14 +89,14 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
       Как только все настроено, <strong>начинайте наслаждаться</strong>. Если вы впервые
       столкнулись с Sass, то специально для вас мы создали несколько ресурсов для обучения.
 
-    %p= link_to "Узнать больше о Sass", "/guide", :class => "button primary"
+    %p= link_to 'Узнать больше о Sass', '/guide', :class => 'sl-c-button sl-c-button--primary'
 
     %dl
       %dt Установка в любом месте (Standalone)
       %dd
         Вы можете установить Sass в Windows, Mac, или Linux путем скачивания дистрибутива
-        для вашей операционной системы #{link_to "from GitHub", release_url(:dart)} и
-        <a href="https://katiek2.github.io/path-doc/">выполните действия с
+        для вашей операционной системы #{link_to 'from GitHub', release_url(:dart)} и
+        <a href='https://katiek2.github.io/path-doc/'>выполните действия с
         <code>PATH</code></a>. Вот и все: никаких зависимостей нет и ничего
         не нужно устанавливать дополнительно.
 
@@ -94,7 +104,7 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
       %dd
         %p
           Если вы используете Node.js, то вы можете установить Sass c помощью
-          <a href="https://www.npmjs.com/">npm</a>:
+          <a href='https://www.npmjs.com/'>npm</a>:
 
         %pre
           :preserve
@@ -108,7 +118,7 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
       %dt Установка в Windows (Chocolatey)
       %dd
         %p
-          Если вы используете <a href="https://chocolatey.org/">менеджер пакетов Chocolatey</a> для
+          Если вы используете <a href='https://chocolatey.org/'>менеджер пакетов Chocolatey</a> для
           Windows, вы можете установить Dart Sass при помощи команды:
 
         %pre
@@ -118,9 +128,9 @@ meta_key: установка, sass, scss, codekit, compass, koala, hammer, liveR
       %dt Установка в Mac OS X (Homebrew)
       %dd
         %p
-          Если вы используете <a href="https://brew.sh/">менеджер пакетов Homebrew</a> для
+          Если вы используете <a href='https://brew.sh/'>менеджер пакетов Homebrew</a> для
           Mac OS X, вы можете установить Dart Sass при помощи команды:
 
         %pre
           :preserve
-            brew install --devel sass/sass/sass
+            brew install sass/sass/sass
