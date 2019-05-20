@@ -4,12 +4,20 @@
     %meta(charset='utf-8')
     %meta(http-equiv='X-UA-Compatible' content='IE=edge')
     %title= page_title
-    %meta(name='description' content='Syntatically Awesome Style Sheets')
+    %meta{name: 'description', content: current_page.data.meta_desc}
+    %meta{name: 'keywords', content: current_page.data.meta_key}
     %meta(name='viewport' content='width=device-width, initial-scale=1')
+    %meta(name='yandex-verification' content='62ffc9e5474beb05')
+    %meta(name='google-site-verification' content='XUy3epM71eWuaSC1yG-aqCyYXPN3iEO5vTzOFpdcBz8')
+    %meta(content='website' property='og:type')
+    %meta(content='ru_RU' property='og:locale')
+    %meta(content='Документация по Sass на русском языке' property='og:site_name')
+    %meta{property: "og:title", content: current_page.data.title}
+    %meta{property: "og:url", content: "https://sass-scss.ru/" + current_page.path}
+    %meta(content='http://sass-scss.ru/assets/img/logo.png' property='og:image')
 
-    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600|Source+Serif+Pro&display=swap&subset=cyrillic'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600|Source+Serif+Pro&display=swap&subset=latin,cyrillic'
     = stylesheet_link_tag "https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic"
-    = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css'
     = stylesheet_link_tag 'sass'
     = yield_content :css
     %noscript= stylesheet_link_tag 'noscript'
@@ -85,9 +93,11 @@
           -#  = link_to 'Implementation Guide', '/implementation'
 
     - if content_for?(:section_bottom)
-      %section.rek(style="padding-top: 1.5em" )
-        #yandex_rtb_R-A-227839-1
-      %section.sl-background--white.sl-l-container= Typogruby.improve(yield_content :section_bottom)
+      %section.sl-background--white.sl-l-container
+        %section.rek(style="padding-top: 1.5em" )
+          #yandex_rtb_R-A-227839-1
+
+        = Typogruby.improve(yield_content :section_bottom)
 
     %footer.site-footer.contentinfo(itemtype='http://schema.org/WPFooter' itemscope='itemscope' role='contentinfo')
       .sl-l-container.sl-l-section
@@ -122,3 +132,35 @@
 
     = javascript_include_tag 'sass'
     = yield_content :js_foot
+
+    :javascript
+      (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+          Ya.Context.AdvManager.render({
+            blockId: "R-A-227839-1",
+            renderTo: "yandex_rtb_R-A-227839-1",
+            async: true
+          });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+      })(this, this.document, "yandexContextAsyncCallbacks");
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60543463-1', 'auto');
+      ga('send', 'pageview');
+
+      (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter29028140 = new Ya.Metrika({id:29028140, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+
+    %noscript
+      %div
+        %img{src: "//mc.yandex.ru/watch/29028140", style: "position:absolute; left:-9999px;"}

@@ -1,6 +1,10 @@
 = wrap_layout :layout do
   - container = current_page.data.no_container ? '' : 'sl-l-container sl-l-container--small'
   .docSearch-content{class: container}
+    - if (current_page.data.no_add_before_intro == nil)
+      %section.rek(style="padding-top: 1.5em" )
+        #yandex_rtb_R-A-227839-1
+
     - if current_page.data.introduction
       - center_introduction = current_page.data.center_introduction ? 'sl-c-introduction--center' : ''
       .sl-c-introduction{class: center_introduction}
